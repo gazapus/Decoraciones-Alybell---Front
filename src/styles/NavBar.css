@@ -1,0 +1,22 @@
+.NavBar {
+    width: 100%;
+    background-color: rgba(25, 2, 126, 0.753);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: wheat;
+    box-sizing: border-box;
+    height: 15%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+.NavBar__leftItems {
+    display: flex;
+    flex-grow: 1;
+}
+
+.NavBar__rightItems {
+    display: flex;
+    flex-wrap: wrap;
+}
