@@ -1,9 +1,12 @@
 import './App.css';
+import ScreenContainer from './components/ScreenContainer';
 
 function App() {
   return (
     <div className="App">
-      <h1>hola pepe</h1>
+      <ScreenContainer>
+        <span>asda</span>
+      </ScreenContainer>
     </div>
   );
 }
