@@ -7,7 +7,7 @@ import '../styles/ScreenContainer.css';
  */
 function ScreenContainer({ 
         children,
-        backgroundImage = 'https://i.ibb.co/SKY3LTR/blurred-bokeh-light-sunset-yellow-string-lights-decor-beach-restaurant-152696283.jpg',
+        backgroundImage = 'https://i.ibb.co/zmbN1fH/hero-bg.jpg',
         })
     {
     return (
