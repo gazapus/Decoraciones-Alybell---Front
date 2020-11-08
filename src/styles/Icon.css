@@ -1,0 +1,40 @@
+.Icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2em;
+}
+
+.Icon__image:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 3px rgb(26, 0, 170);
+}
+
+.Icon__image {
+    width: 100%;
+    color: red;
+    border-radius: 50%;
+    transition-property: 'transform';
+    transition-duration: 0.5s;
+}
+
+.Icon__image-xsmall {
+    width: 1.5em;
+}
+
+.Icon__image-small {
+    width: 2em;
+}
+
+.Icon__image-medium {
+    width: 2.5em;
+}
+
+.Icon__image-large {
+    width: 3em;
+}
+
+.Icon__image-xlarge {
+    width: 3.5em;
+}

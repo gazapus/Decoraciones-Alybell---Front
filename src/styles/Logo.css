@@ -1,0 +1,21 @@
+@font-face {
+    font-family: Abel;
+    src: url(../fonts/Abel-Regular.ttf);
+}
+
+.Logo {
+    display: flex;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Logo__image {
+    min-height: 2em;
+    height: 60%;
+}
+
+.Logo__text {
+    font-size: 2em;
+    font-family: 'Abel';
+}
