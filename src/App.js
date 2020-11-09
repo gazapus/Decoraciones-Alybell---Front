@@ -29,7 +29,9 @@ function App() {
 
   return (
     <div className="App">
-      <ScreenContainer>
+      <ScreenContainer
+        backgroundImageSrc = 'https://i.ibb.co/zmbN1fH/hero-bg.jpg'
+      >
         <NavBar
           leftItems={<Logo />}
           rightItems={[
@@ -50,6 +52,9 @@ function App() {
             handleClick={() => console.log("a")}
           />
         </BannerText>
+      </ScreenContainer>
+      <ScreenContainer>
+        
       </ScreenContainer>
     </div>
   );
