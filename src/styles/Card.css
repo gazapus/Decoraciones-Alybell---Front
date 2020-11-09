@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript-VariableFont_wght.ttf');
+}
+
+@font-face {
+    font-family: Abel;
+    src: url(../fonts/Abel-Regular.ttf);
+}
+
+.Card {
+    background-color: rgb(43, 0, 0);
+    overflow: hidden;
+}
+
+.Card:hover {
+    cursor: pointer;
+}
+
+.Card__image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition-duration: 1s;
+}
+
+.Card__image-hidden {
+    transform: translateY(-100%);
+    transition-duration: 1.5s;
+}
+
+.Card__description {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition-duration: 1s;
+}
+
+.Card__description-show {
+    transform: translateY(-100%);
+    transition-duration: 1.5s;
+}
+
+.CardDescription__title {
+    flex: 1;
+    margin: 0; 
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0 5% 0 5%;
+    box-sizing: border-box;
+}
+
+.CardDescription__line{
+    border-style: solid;
+    width: 90%;
+    margin: 0;
+    border-color: rgb(194, 194, 194);
+    border-width: 1px;
+}
+.CardDescription__text {
+    flex: 3;
+    margin: 0; 
+    width: 100%;                
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-family: 'Abel';
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5%;
+    overflow-y: auto;
+}
+
+.CardDescription__link {
+    flex: 1;
+    color: rgb(26, 61, 219);
+    font-family: 'Abel';
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 0.15em;
+    font-size: 0.9em;
+}
+
+.CardDescription__price {
+    flex: 1;
+    background-color: rgb(177, 177, 177);
+    margin: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'Abel';
+    font-size: 1.1em;
+    padding-right: 1em;
+    box-sizing: border-box;
+}

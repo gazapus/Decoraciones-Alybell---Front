@@ -8,7 +8,7 @@ function Logo() {
     return(
         <div className="Logo">
             <img src={SolucionImage} alt="" className="Logo__image"/>
-            <h1 className="Logo__text">DECORACIONES ALYBELL</h1>
+            <h1 className="Logo__text">Decoraciones Alybell</h1>
         </div>
     )
 }

@@ -1,6 +1,6 @@
 @font-face {
-    font-family: Abel;
-    src: url(../fonts/Abel-Regular.ttf);
+    font-family: 'Dancing Script';
+    src: url('../fonts/DancingScript-VariableFont_wght.ttf');
 }
 
 .Logo {
@@ -16,6 +16,6 @@
 }
 
 .Logo__text {
-    font-size: 2em;
-    font-family: 'Abel';
+    font-size: 2.3em;
+    font-family: 'Dancing Script';
 }

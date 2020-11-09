@@ -9,10 +9,11 @@ import Icon from './components/Icon';
 import useWindowSize from './components/useWindowSize';
 import BannerText from './components/BannerText';
 import BannerButton from './components/BannerButton';
+import CardsContainer from './components/CardsContainer';
 
 function App() {
   const [imageSize, setImageSize] = useState("M");
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
 
   useEffect(() => {
     if (width <= 500) {
@@ -30,7 +31,7 @@ function App() {
   return (
     <div className="App">
       <ScreenContainer
-        backgroundImageSrc = 'https://i.ibb.co/zmbN1fH/hero-bg.jpg'
+        backgroundImageSrc='https://i.ibb.co/zmbN1fH/hero-bg.jpg'
       >
         <NavBar
           leftItems={<Logo />}
@@ -49,12 +50,12 @@ function App() {
           />
           <BannerButton
             text="CONTACTO"
-            handleClick={() => console.log("a")}
+            handleClick={() => console.log("ab")}
           />
         </BannerText>
       </ScreenContainer>
       <ScreenContainer>
-        
+        <CardsContainer/>
       </ScreenContainer>
     </div>
   );
