@@ -1,9 +1,16 @@
 import '../styles/ContactForm.css';
 
-function ContactForm() {
+function ContactForm({onOpenKeyboard, onCloseKeyoboard}) {
     return (
         <form className="Form">
-            <input type="text" placeholder="nombre" name="name" className="Form__input" />
+            <input 
+                type="text" 
+                placeholder="nombre" 
+                name="name" 
+                className="Form__input" 
+                onFocus={onOpenKeyboard}
+                onBlur={onCloseKeyoboard}
+            />
             <input type="email" placeholder="email" className="Form__input" />
             <textarea placeholder="mensaje" className="Form__message" />
             <div className="Form__buttonContainer">

@@ -5,6 +5,7 @@ import IconInstagram from '../images/instagram.svg';
 import ContactForm from "./ContactForm";
 
 function ContactScreen() {
+
     return (
         <div className="ContactScreen">
             <div className="ContactScreen__container">
@@ -14,7 +15,10 @@ function ContactScreen() {
                         <hr className="FormHeader__line" />
                         <p className="FormHeader__subtitle">Dejanos un mensaje y te responderemos a la brevedad</p>
                     </div>
-                    <ContactForm />
+                    <ContactForm
+                        onOpenKeyboard={() => console.log("abro")}
+                        onCloseKeyoboard={() => console.log("dejo")}
+                    />
                     <div className="Networks">
                         <Icon image={IconFacebook} url={"#"} size={"S"} />
                         <Icon image={IconInstagram} url={"#"} size={"S"} />
@@ -29,7 +33,9 @@ function ContactScreen() {
                         style={{ border: 0 }}
                         allowFullScreen={true}
                         aria-hidden="false"
-                        tabIndex="0"></iframe>
+                        tabIndex="0"
+                        title="map">
+                    </iframe>
                 </div>
             </div>
         </div>
