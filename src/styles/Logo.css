@@ -19,3 +19,9 @@
     font-size: 2.3em;
     font-family: 'Dancing Script';
 }
+
+@media (max-width: 800px) {
+    .Logo__text {
+        font-size: 1.8em;
+    }
+}
