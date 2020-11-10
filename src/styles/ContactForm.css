@@ -1,0 +1,91 @@
+@font-face {
+    font-family: Abel;
+    src: url(../fonts/Abel-Regular.ttf);
+}
+
+.Form {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 2%;
+    box-sizing: border-box;
+}
+
+.Form__input {
+    width: 80%;
+    height: 10%;
+    margin-top: 3%;
+    font-family: 'Abel';
+    text-indent: 1em;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.548);
+    color: black;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.952);
+}
+
+.Form__message {
+    width: 80%;
+    height: 35%;
+    margin-top: 3%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-family: 'Abel';
+    text-indent: 1em;
+    font-size: 1em;
+    padding-top: 0.5em;
+    background-color: rgba(255, 255, 255, 0.548);
+    color: black;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.952);
+}
+
+.Form__input:focus, .Form__message:focus {
+    background-color: rgba(255, 255, 255, 0.719);
+}
+
+.Form__input::placeholder, .Form__message::placeholder {
+    color: rgb(56, 56, 56);
+}
+
+.Form__buttonContainer {
+    width: 80%;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.Form__button {
+    border-style: solid;
+    border-color: white;
+    margin: 5% 0 1% 0;
+    padding: 1.5% 5% 1.5% 5%;
+    font-size: 1em;
+    color: white;
+    background-color: rgba(255, 255, 255, 0);
+    transition-duration: 0.8s;
+}
+
+.Form__button:hover {
+    cursor: pointer;
+    border-color: black;
+    background-color: white;
+    color: black;
+}
+
+@media(orientation: portrait) {
+    .Form {
+        height: 65%;
+    }
+    .Form__input {
+        width: 95%;
+    }
+    .Form__message {
+        width: 95%;
+    }
+    .Form__buttonContainer {
+        justify-content: center;
+    }
+}
