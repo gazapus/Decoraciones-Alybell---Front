@@ -54,8 +54,10 @@ function App() {
           />
         </BannerText>
       </ScreenContainer>
-      <ScreenContainer>
-        <CardsContainer/>
+      <ScreenContainer
+        backgroundImageSrc='https://i.ibb.co/rp6Wk35/photos-2017-9-5-fst-bokeh-texture-colorful.jpg'
+      >
+        <CardsContainer />
       </ScreenContainer>
     </div>
   );
