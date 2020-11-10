@@ -10,6 +10,7 @@ import useWindowSize from './components/useWindowSize';
 import BannerText from './components/BannerText';
 import BannerButton from './components/BannerButton';
 import CardsContainer from './components/CardsContainer';
+import ContactScreen from './components/ContactScreen';
 
 function App() {
   const [imageSize, setImageSize] = useState("M");
@@ -59,8 +60,10 @@ function App() {
       >
         <CardsContainer />
       </ScreenContainer>
-      <ScreenContainer>
-        
+      <ScreenContainer
+        backgroundImageSrc="https://i.ibb.co/5k3KVkX/11.jpg"
+      >
+        <ContactScreen/>
       </ScreenContainer>
     </div>
   );
