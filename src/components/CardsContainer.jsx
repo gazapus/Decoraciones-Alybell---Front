@@ -7,57 +7,57 @@ import Card from './Card';
 import ShopBanner from './ShopBanner';
 
 const cardDatas = [{
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://image.freepik.com/vector-gratis/cartel-super-sale-banner-gran-venta-despacho-50-rebajado_1057-5174.jpg",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://cdn.fstoppers.com/styles/medium/s3/media/2015/12/07/white_background_bag_after.jpg?itok=uj0Yl1Gv&timestamp=1449548314",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://expertphotography.com/wp-content/uploads/2019/05/product-photography-business-5.jpg",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://www.powproductphotography.com/app/uploads/2020/03/drink-photography-0008.jpg",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://expertphotography.com/wp-content/uploads/2018/03/Natural-Light-Product-Photography-Sunglasses.jpg",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://expertphotography.com/wp-content/uploads/2019/01/product-photography-on-a-tiny-budget-5-2.jpg",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://img.pixelz.com/blog/photograph-white-products-on-white-backgrounds-ecommerce/set-up1.jpg?w=1000",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://www.volusion.com/blog/content/images/2018/10/WhiteItem.jpg",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://dqg5fqdy33g0r.cloudfront.net/photos/event-planner/null/spyne/1536769630868/logo_4yfU48oeZS.",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://s3.us-east-1.wasabisys.com/grid50/2017/12/white-background-prudct-photography-example-002.jpg",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
 }, {
-    imageURL: "https://i.pinimg.com/originals/c6/16/ac/c616acbc749cecaaedc6c4f1eb6b56a7.jpg",
+    imageURL: "https://www.stephengalea.com/wp-content/uploads/2018/05/Foodstylist_McDonalds-Shoot-6.jpg",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
     redirectURL: "#"
