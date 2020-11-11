@@ -1,11 +1,11 @@
-import '../styles/CardsContainer.css';
 import { useState, useEffect } from 'react';
 import useWindowSize from './useWindowSize';
-import { getScrollbarWidth } from '../utils/getScrollbarWidth.js';
 import Card from './Card';
 import ShopBanner from './ShopBanner';
+import { getScrollbarWidth } from '../utils/getScrollbarWidth.js';
+import '../styles/CardsPage.css';
 
-const cardDatas = [{
+const cardDatas_test = [{
     imageURL: "https://image.freepik.com/vector-gratis/cartel-super-sale-banner-gran-venta-despacho-50-rebajado_1057-5174.jpg",
     description: "Hermosa replica de un coso japones con multiples colores, ideal para esta epoca el año.",
     price: 150.6,
@@ -67,14 +67,15 @@ const cardDatas = [{
     redirectURL: "#"
 },];
 
-function CardsContainer() {
+
+function CardsPage() {
     const [width, height] = useWindowSize();
     const [largeCard, setLargeCard] = useState(1);
     const [cardsQuantity, setCardsQuantity] = useState(1);
-    const [heightSpare, setHeightSpare] = useState(0);
+    const [cardDatas, setCardDatas] = useState(cardDatas_test);
 
     useEffect(() => {
-        function adjust(columns) {
+        function adjustCards(columns) {
             // Set large card
             let windowWidth = width - getScrollbarWidth();
             let largeCard = windowWidth / columns;
@@ -82,20 +83,17 @@ function CardsContainer() {
             // set card quantity
             let cardRows = Math.floor(height / largeCard);
             setCardsQuantity(Math.max(2, cardRows) * columns);
-            // set spare space 
-            let heightRest = height - (cardRows * largeCard);
-            setHeightSpare(heightRest);
         }
 
         if (width >= height) {
-            adjust(4);
+            adjustCards(4);
         } else {
-            adjust(2);
+            adjustCards(2);
         }
     }, [width, height])
 
     return (
-        <div className="CardsContainer">
+        <div className="CardsPage">
             {cardDatas.map((data, index) =>
                 (index < cardsQuantity) ?
                     <Card
@@ -108,9 +106,9 @@ function CardsContainer() {
                     /> :
                     ''
             )}
-            <ShopBanner link="#" heightSpare={heightSpare} />
+            {(cardsQuantity === cardDatas.length) ? '': ''}
         </div>
-    )
+    );
 }
 
-export default CardsContainer;
+export default CardsPage;

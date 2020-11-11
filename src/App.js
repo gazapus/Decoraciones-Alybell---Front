@@ -9,9 +9,10 @@ import Icon from './components/Icon';
 import useWindowSize from './components/useWindowSize';
 import BannerText from './components/BannerText';
 import BannerButton from './components/BannerButton';
-import CardsContainer from './components/CardsContainer';
 import ContactScreen from './components/ContactScreen';
 import FullScreenPage from './components/FullScreenPage';
+import CardsPage from './components/CardsPage';
+
 
 function App() {
   const [imageSize, setImageSize] = useState("M");
@@ -31,7 +32,7 @@ function App() {
   const fbURL = "https://www.facebook.com";
   const igURL = "https://www.instagram.com";
   const subText = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et la po",
     "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
     "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum "
   ];
@@ -39,10 +40,11 @@ function App() {
   return (
     <div className="App">
       <FullScreenPage
-        backgroundImageSrc='https://i.ibb.co/zmbN1fH/hero-bg.jpg'
+        backgroundImageSrc='https://i.ibb.co/d0jRB7w/Vintage-color-filter-cosmos-flower-field.jpg'
         keyboardOpen = {keyobardOpen}
       >
         <NavBar
+          color={'#0080FFa1'}
           leftItems={<Logo />}
           rightItems={[
             <Icon image={IconFacebook} url={fbURL} key="fb" size={imageSize} />,
@@ -56,18 +58,18 @@ function App() {
           <BannerButton
             text="SHOP"
             handleClick={() => console.log("a")}
+            color="#0080FF"
           />
           <BannerButton
             text="CONTACTO"
             handleClick={() => console.log("ab")}
+            color="#0080FF"
           />
         </BannerText>
       </FullScreenPage>
-      <ScreenContainer
-        backgroundImageSrc='https://i.ibb.co/rp6Wk35/photos-2017-9-5-fst-bokeh-texture-colorful.jpg'
-      >
-        <CardsContainer />
-      </ScreenContainer>
+      <CardsPage>
+       
+      </CardsPage>
       <ScreenContainer
         backgroundImageSrc="https://i.ibb.co/5k3KVkX/11.jpg"
       >

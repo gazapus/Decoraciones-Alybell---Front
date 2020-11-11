@@ -27,7 +27,7 @@
     font-size: 3.8em;
     margin: 0;
     max-height: 50%;
-    overflow: hidden;
+    overflow: auto;
     text-overflow: ellipsis;
 }
 
@@ -103,7 +103,7 @@
         max-height: 45%;
     }
     .SubText__text {
-        font-size: 1.1em; 
+        font-size: 1em; 
         padding: 3% 9% 3% 5%;
     }
 
