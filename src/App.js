@@ -45,7 +45,7 @@ function App() {
           ]}
         />
         <BannerText
-          mainText="LUCES Y DECORACIONES PARA TU HOGAR Y EVENTO SIEMPRE"
+          mainText="LUCES Y DECORACIONES PARA TU HOGAR Y EVENTO"
           subText="Packed with all the goodies you can get, Kallyas is our flagship premium template. per bue que en fin"
         >
           <BannerButton

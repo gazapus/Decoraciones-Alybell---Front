@@ -27,7 +27,8 @@
     font-size: 3.8em;
     margin: 0;
     max-height: 50%;
-    overflow: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .BannerText__sub {
@@ -38,7 +39,8 @@
     padding: 5% 10% 5% 5%;
     border-radius: 0 100px 0 25px;
     max-height: 25%;
-    overflow: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .BannerText__children {
@@ -57,7 +59,7 @@
     }
 
     .BannerText__main {
-        font-size: 3.5em;
+        font-size: 3.4em;
     }
 }
 
@@ -87,5 +89,6 @@
 
     .BannerText__children {
         justify-content: center;
+        max-height: 35%;
     }
 }

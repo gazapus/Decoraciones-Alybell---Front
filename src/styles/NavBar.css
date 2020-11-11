@@ -6,9 +6,9 @@
     align-items: center;
     color: wheat;
     box-sizing: border-box;
-    height: 15%;
-    padding-left: 15%;
-    padding-right: 15%;
+    height: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .NavBar__leftItems {
@@ -41,11 +41,11 @@
     .NavBar {
         padding-left: 1%;
         padding-right: 1%;
+        height: 12%;
     }
 
     .NavBar__rightItems {
         flex-wrap: nowrap;
-        align-items: flex-start;
-        padding-top: 5%;
+        align-items: center;
     }
 }
