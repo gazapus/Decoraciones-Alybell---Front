@@ -30,6 +30,11 @@ function App() {
 
   const fbURL = "https://www.facebook.com";
   const igURL = "https://www.instagram.com";
+  const subText = [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad",
+    "minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
+    "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum "
+  ];
 
   return (
     <div className="App">
@@ -46,7 +51,7 @@ function App() {
         />
         <BannerText
           mainText="LUCES Y DECORACIONES PARA TU HOGAR Y EVENTO"
-          subText="Packed with all the goodies you can get, Kallyas is our flagship premium template. per bue que en fin"
+          subText={subText}
         >
           <BannerButton
             text="SHOP"

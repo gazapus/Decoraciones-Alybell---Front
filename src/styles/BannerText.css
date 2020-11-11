@@ -31,16 +31,37 @@
     text-overflow: ellipsis;
 }
 
-.BannerText__sub {
+.SubText {
+    background-color: rgba(255, 255, 255, 0.507);
+    height: 18%;
+    box-sizing: border-box;
+    padding: 0.5% 4% 1% 1%;
+    overflow: hidden;
+    border-radius: 0 100px 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2% 0 2% 0;
+}
+
+.SubText__text {
     color: rgb(27, 27, 27);
     font-family: Rajdhani-r;
     font-size: 1.5em;
-    background-color: rgba(255, 255, 255, 0.507);
-    padding: 5% 10% 5% 5%;
-    border-radius: 0 100px 0 25px;
-    max-height: 25%;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; 
+    margin: 0;
+    text-align: center;
+}
+
+.SubText__text-in {
+    opacity: 1;
+    transition-duration: 2s;
+}
+
+.SubText__text-out {
+    opacity: 0;
+    transition-duration: 2s;
 }
 
 .BannerText__children {
@@ -81,10 +102,9 @@
         text-align: center;
         max-height: 45%;
     }
-    .BannerText__sub {
-        font-size: 1.3em; 
-        max-height: 20%;
-        padding: 3% 10% 3% 5%;
+    .SubText__text {
+        font-size: 1.1em; 
+        padding: 3% 9% 3% 5%;
     }
 
     .BannerText__children {
