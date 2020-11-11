@@ -1,0 +1,15 @@
+.FullScreenPage {
+    width: 100%;
+    min-height: 300px;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+}
+
+.FullScreenPage__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

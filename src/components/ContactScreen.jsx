@@ -4,7 +4,7 @@ import IconFacebook from '../images/facebook.svg';
 import IconInstagram from '../images/instagram.svg';
 import ContactForm from "./ContactForm";
 
-function ContactScreen() {
+function ContactScreen({onOpenKeyboard, onCloseKeyoboard}) {
 
     return (
         <div className="ContactScreen">
@@ -16,8 +16,8 @@ function ContactScreen() {
                         <p className="FormHeader__subtitle">Dejanos un mensaje y te responderemos a la brevedad</p>
                     </div>
                     <ContactForm
-                        onOpenKeyboard={() => console.log("abro")}
-                        onCloseKeyoboard={() => console.log("dejo")}
+                        onOpenKeyboard={onOpenKeyboard}
+                        onCloseKeyoboard={onCloseKeyoboard}
                     />
                     <div className="Networks">
                         <Icon image={IconFacebook} url={"#"} size={"S"} />

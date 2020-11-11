@@ -11,10 +11,12 @@ import BannerText from './components/BannerText';
 import BannerButton from './components/BannerButton';
 import CardsContainer from './components/CardsContainer';
 import ContactScreen from './components/ContactScreen';
+import FullScreenPage from './components/FullScreenPage';
 
 function App() {
   const [imageSize, setImageSize] = useState("M");
   const [width] = useWindowSize();
+  const [keyobardOpen, setKeyboardOpen] = useState(false);
 
   useEffect(() => {
     if (width <= 500) {
@@ -31,8 +33,9 @@ function App() {
 
   return (
     <div className="App">
-      <ScreenContainer
+      <FullScreenPage
         backgroundImageSrc='https://i.ibb.co/zmbN1fH/hero-bg.jpg'
+        keyboardOpen = {keyobardOpen}
       >
         <NavBar
           leftItems={<Logo />}
@@ -54,7 +57,7 @@ function App() {
             handleClick={() => console.log("ab")}
           />
         </BannerText>
-      </ScreenContainer>
+      </FullScreenPage>
       <ScreenContainer
         backgroundImageSrc='https://i.ibb.co/rp6Wk35/photos-2017-9-5-fst-bokeh-texture-colorful.jpg'
       >
@@ -63,7 +66,10 @@ function App() {
       <ScreenContainer
         backgroundImageSrc="https://i.ibb.co/5k3KVkX/11.jpg"
       >
-        <ContactScreen/>
+        <ContactScreen
+          onOpenKeyboard={ () => setKeyboardOpen(true)}
+          onCloseKeyoboard={ () => setKeyboardOpen(false)}
+        />
       </ScreenContainer>
     </div>
   );
