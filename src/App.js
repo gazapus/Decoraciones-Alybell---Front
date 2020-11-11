@@ -5,6 +5,7 @@ import NavBar from './components/NavBar';
 import Logo from './components/Logo';
 import IconFacebook from './images/facebook.svg';
 import IconInstagram from './images/instagram.svg';
+import Meli from './images/meli.png';
 import Icon from './components/Icon';
 import useWindowSize from './components/useWindowSize';
 import BannerText from './components/BannerText';
@@ -12,7 +13,7 @@ import BannerButton from './components/BannerButton';
 import ContactScreen from './components/ContactScreen';
 import FullScreenPage from './components/FullScreenPage';
 import CardsPage from './components/CardsPage';
-
+import ShopBar from './components/ShopBar';
 
 function App() {
   const [imageSize, setImageSize] = useState("M");
@@ -29,6 +30,7 @@ function App() {
     }
   }, [width])
 
+  const color = "#01b774";
   const fbURL = "https://www.facebook.com";
   const igURL = "https://www.instagram.com";
   const subText = [
@@ -44,7 +46,7 @@ function App() {
         keyboardOpen = {keyobardOpen}
       >
         <NavBar
-          color={'#0080FFa1'}
+          color={color + "a1"}
           leftItems={<Logo />}
           rightItems={[
             <Icon image={IconFacebook} url={fbURL} key="fb" size={imageSize} />,
@@ -58,15 +60,21 @@ function App() {
           <BannerButton
             text="SHOP"
             handleClick={() => console.log("a")}
-            color="#0080FF"
+            color={color}
           />
           <BannerButton
             text="CONTACTO"
             handleClick={() => console.log("ab")}
-            color="#0080FF"
+            color={color}
           />
         </BannerText>
       </FullScreenPage>
+      <ShopBar
+        text="Visita nuestro E- Shop"
+        url="#"
+        logo={Meli}
+        backgroundImage="https://i.ibb.co/SKczfXW/Festive-Christmas-cozy-atmosphere-with-home-decor-and-tangerines-on-a-wooden-background-home-comfort.jpg"
+      />
       <CardsPage>
        
       </CardsPage>
