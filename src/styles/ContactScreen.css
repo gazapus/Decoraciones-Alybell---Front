@@ -84,7 +84,7 @@
     }
 }
 
-/*LANDSCAPE MOBIL*/
+/*LANDSCAPE MOBIL
 @media(max-width: 1024px) and (orientation: landscape) {
     .ContactScreen__container {
         width: 97%;
@@ -109,10 +109,31 @@
         flex-direction: row;
         padding-left: 5%;
     }
+}*/
+
+@media (max-width: 1024px) {
+    .ContactScreen__container {
+        width: 95%;
+        height: 95%;
+    }
+    .Form__title {
+        font-size: 2em;
+    }
+    .Form__subtitle {
+        font-size: 0.9em;
+        width: 100%;
+        margin: 0.1em;
+    }
+    .Form__networks {
+        height: auto;
+        flex-direction: row;
+        padding-left: 5%;
+    }
 }
 
-/*PORTRAIT MOBIL AND KEYOPEN*/
-@media(max-width: 1024px) and (orientation: portrait), (max-width: 1024px) and (max-height: 500px) {
+/*PORTRAIT MOBIL*/
+
+@media(max-width: 1024px) and (orientation: portrait), (max-width: 1024px) and (orientation: landscape) and (max-height: 330px) {
     .ContactScreen__container {
         width: 95%;
         height: 95%;
@@ -120,17 +141,25 @@
         flex-direction: column;
     }
     .Form {
-       width: 100%;
+        width: 100%;
     }
-    .Form__title {
-        font-size: 2.1em;
+}
+
+/* LANDSCAPE MOBIL */
+
+@media(max-width: 1024px) and (orientation: landscape) and (min-height: 330px){
+    .ContactScreen__container {
+        width: 97%;
+        height: 97%;
+        flex-direction: row;
     }
-    .Form__subtitle {
-        font-size: 1em;
+    .Form {
+        width: 70%;
+    }
+    .Form__header {
+        justify-content: flex-start;
     }
     .Form__networks {
-        height: auto;
-        flex-direction: row;
-        padding-left: 5%;
+        display: none;
     }
 }

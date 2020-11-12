@@ -52,16 +52,16 @@
     margin-bottom: 5%;
 }
 
-@media(max-width: 1024px) and (min-height: 500px) {
+@media(max-width: 1024px) {
     .ContactForm__input {
         width: 90%;
-        height: 2.5em;
-        margin: 0.5em;
+        height: 3em;
+        margin: 0.3em;
     }
     .ContactForm__message {
         width: 90%;
         min-height: 3em;
-        margin: 0.5em;
+        margin: 0.3em;
     }
     .ContactForm__buttonContainer {
         width: 90%;
@@ -69,10 +69,11 @@
     }
 }
 
+/*
 @media(max-width: 1024px) and (max-height: 500px) {
     .ContactForm__input {
         width: 90%;
-        height: 2.2em;
+        height: 2.3em;
         margin: 0.2em;
     }
     .ContactForm__message {
@@ -84,4 +85,4 @@
         width: 90%;
         justify-content: center;
     }
-}
+}*/
