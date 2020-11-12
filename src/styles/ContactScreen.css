@@ -12,91 +12,125 @@
 }
 
 .ContactScreen__container {
-    box-sizing: border-box;
-    width: 70%;
-    height: 80%;
+    width: 75%;
+    height: 85%;
     border-style: solid;
-    border-color: white;
-    background-color: rgba(0, 0, 0, 0.25);
+    border-color: whitesmoke;
+    border-radius: 2vw;
     display: flex;
-    justify-content: center;
+    overflow: hidden;
 }
 
-.ContactScreen__formContainer {
-    width: 100%;
+.Form {
+    display: flex;
+    flex-grow: 1;
+    padding: 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     height: 100%;
-    flex: 3;
-    padding: 3%;
-    box-sizing: border-box;
 }
 
-.FormHeader {
-    height: 20%;
+.Form__header {
+    min-height: 20%;
+    width: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     box-sizing: border-box;
-    overflow-y: hidden;
+    padding: 0 5% 0 5%;
+    color: wheat;
 }
 
-.FormHeader__title {
+.Form__title {
     margin: 0;
-    font-family: 'Abel';
-    font-size: 2.3em;
-    color: white;
+    font-family: Abel;
+    font-size: 2.5em;
 }
 
-.FormHeader__subtitle {
+.Form__subtitle {
+    font-family: Abel;
+    font-size: 1.2em;
+}
+
+.Form__line {
     margin: 0;
-    font-family: 'Abel';
-    font-size: 1.3em;
-    margin-top: 1%;
-    color: white;
 }
 
-.FormHeader__line {
-    width: 99%;
-    margin-top: 1%;
+.Form__inputs {
+    flex-grow: 1;
+    width: 100%;
 }
 
-.Networks {
-    height: 10%;
+.Form__networks {
+    width: 100%;
+    height: 15%;
     display: flex;
     flex-direction: row-reverse;
+    padding-right: 5%;
+    background-color: rgba(51, 51, 51, 0.616);
+    box-sizing: border-box;
 }
 
-.ContactScreen__map {
-    background-color: blue;
-    width: 100%;
-    height: 100%;
-    flex: 2;
+.Map {
+    display: flex;
+    flex-grow: 1;
 }
 
-@media(orientation: portrait) {
+@media(max-width: 1200px) {
     .ContactScreen__container {
-        flex-direction: column;
         width: 90%;
         height: 90%;
     }
-    .ContactScreen__formContainer {
-        flex: 4;
+}
+
+/*LANDSCAPE MOBIL*/
+@media(max-width: 1024px) and (orientation: landscape) {
+    .ContactScreen__container {
+        width: 97%;
+        height: 97%;
+        flex-direction: row;
     }
-    .ContactScreen__map {
-        flex: 2;
+    .Form {
+        width: 50%;
     }
-    .FormHeader {
-        height: 25%;
+    .Form__header {
+        justify-content: flex-start;
     }
-    .FormHeader__subtitle {
+    .Form__title {
+        font-size: 2em;
+    }
+    .Form__subtitle {
         font-size: 0.8em;
+        margin: 0;
+    }
+    .Form__networks {
+        height: auto;
+        flex-direction: row;
+        padding-left: 5%;
     }
 }
 
-@media(max-width: 800px), (orientation: landscape) {
+/*PORTRAIT MOBIL AND KEYOPEN*/
+@media(max-width: 1024px) and (orientation: portrait), (max-width: 1024px) and (max-height: 500px) {
     .ContactScreen__container {
         width: 95%;
         height: 95%;
+        display: flex;
+        flex-direction: column;
     }
-    .Networks {
+    .Form {
+       width: 100%;
+    }
+    .Form__title {
+        font-size: 2.1em;
+    }
+    .Form__subtitle {
+        font-size: 1em;
+    }
+    .Form__networks {
+        height: auto;
         flex-direction: row;
+        padding-left: 5%;
     }
 }

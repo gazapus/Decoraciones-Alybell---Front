@@ -1,20 +1,36 @@
 import '../styles/ContactForm.css';
+import BannerButton from './BannerButton';
 
 function ContactForm({onOpenKeyboard, onCloseKeyoboard}) {
     return (
-        <form className="Form">
+        <form className="ContactForm">
             <input 
                 type="text" 
                 placeholder="nombre" 
                 name="name" 
-                className="Form__input" 
+                className="ContactForm__input" 
                 onFocus={onOpenKeyboard}
                 onBlur={onCloseKeyoboard}
             />
-            <input type="email" placeholder="email" className="Form__input" />
-            <textarea placeholder="mensaje" className="Form__message" />
-            <div className="Form__buttonContainer">
-                <button className="Form__button">ENVIAR</button>
+            <input 
+                type="email" 
+                placeholder="email" 
+                className="ContactForm__input"
+                onFocus={onOpenKeyboard}
+                onBlur={onCloseKeyoboard}
+            />
+            <textarea 
+                placeholder="mensaje" 
+                className="ContactForm__message"
+                onFocus={onOpenKeyboard}
+                onBlur={onCloseKeyoboard}
+            />
+            <div className="ContactForm__buttonContainer">
+                <BannerButton
+                    text="ENVIAR"
+                    handleClick={() => console.log("Ep")}
+                    color="#afaaaa"
+                />
             </div>
         </form>
     )

@@ -77,14 +77,16 @@ function App() {
       >
         <About/>
       </FullScreenPage>
-      <ScreenContainer
+      <FullScreenPage
         backgroundImageSrc="https://i.ibb.co/5k3KVkX/11.jpg"
+        keyboardOpen={keyobardOpen}
+
       >
         <ContactScreen
           onOpenKeyboard={() => setKeyboardOpen(true)}
           onCloseKeyoboard={() => setKeyboardOpen(false)}
         />
-      </ScreenContainer>
+      </FullScreenPage>
     </div>
   );
 }
