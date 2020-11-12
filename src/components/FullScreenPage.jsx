@@ -19,6 +19,7 @@ function FullScreenPage({
     const [width, height] = useWindowSize();
     const [style, setStyle] = useState({});
     const [originalHeight, setOriginalHeight] = useState(0);
+    const [inputsFocus, setInputsFocus] = useState(0);
 
     useEffect(() => {
         let newStyle = {};
@@ -29,9 +30,21 @@ function FullScreenPage({
         }
         if (keyboardOpen) {
             newStyle.height = originalHeight + 'px';
+            setInputsFocus(inputsFocus + 1);
         } else {
-            newStyle.height = height + 'px';
-            setOriginalHeight(height);
+            if(inputsFocus === 0) {
+                newStyle.height = height + 'px';
+                setOriginalHeight(height);
+            }
+            if(inputsFocus === 1) {
+                newStyle.height = height + 'px';
+                setOriginalHeight(height);
+                setInputsFocus(inputsFocus - 1);
+            }
+            if(inputsFocus > 1) {
+                setInputsFocus(inputsFocus - 1);
+            }
+            
         }
         setStyle(newStyle);
         // eslint-disable-next-line react-hooks/exhaustive-deps

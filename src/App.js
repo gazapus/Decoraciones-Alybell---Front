@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import ScreenContainer from './components/ScreenContainer';
 import NavBar from './components/NavBar';
 import Logo from './components/Logo';
 import IconFacebook from './images/facebook.svg';
