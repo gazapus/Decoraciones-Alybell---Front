@@ -1,6 +1,8 @@
 .App {
   width: 100%;
   margin: 0;
+  background-color: #ffffff;
+  background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
 }
 
 @media (orientation: portrait) {

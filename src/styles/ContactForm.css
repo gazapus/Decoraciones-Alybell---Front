@@ -18,7 +18,7 @@
     border-radius: 8pt;
     border-style: solid;
     box-sizing: border-box;
-    border-color: rgb(175, 0, 0);
+    border-color: rgb(0, 0, 0);
     padding: 0 1em 0 1em;
     font-size: 1em;
     font-family: Abel;
@@ -30,13 +30,14 @@
     min-height: 3em;
     margin: 1em 0 1em 0;
     border-radius: 8pt;
+    border-color: rgb(0, 0, 0);
+    border-width: 2px;
     border-style: solid;
     box-sizing: border-box;
     padding: 0 1em 0 1em;
     font-size: 1em;
     flex: 1;
     font-family: Abel;
-    border-color: rgb(175, 0, 0);
     background-color: rgba(255, 255, 255, 0.384);
 }
 

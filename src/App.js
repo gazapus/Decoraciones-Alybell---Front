@@ -71,14 +71,15 @@ function App() {
       <CardsPage />
       <ShopSection/>
       <FullScreenPage
-        color="#2A1481"
+        color="#ffffff00"
         keyboardOpen={keyobardOpen}
       >
         <About/>
       </FullScreenPage>
       <FullScreenPage
-        backgroundImageSrc="https://i.ibb.co/5k3KVkX/11.jpg"
+        /*backgroundImageSrc="https://i.ibb.co/5k3KVkX/11.jpg"*/
         keyboardOpen={keyobardOpen}
+        color="#ffffff00"
 
       >
         <ContactScreen
