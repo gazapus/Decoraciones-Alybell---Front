@@ -19,10 +19,10 @@
     border-style: solid;
     box-sizing: border-box;
     border-color: rgb(0, 0, 0);
-    padding: 0 1em 0 1em;
     font-size: 1em;
     font-family: Abel;
-    background-color: rgba(255, 255, 255, 0.384);
+    background-color: rgba(255, 255, 255, 0.596);
+    text-indent: 1em;
 }
 
 .ContactForm__message {
@@ -34,15 +34,19 @@
     border-width: 2px;
     border-style: solid;
     box-sizing: border-box;
-    padding: 0 1em 0 1em;
     font-size: 1em;
     flex: 1;
     font-family: Abel;
     background-color: rgba(255, 255, 255, 0.384);
+    text-indent: 1em;
 }
 
 .ContactForm__input::placeholder, .ContactForm__message::placeholder {
-    color: rgb(58, 58, 58);
+    color:rgb(141, 141, 141)
+}
+
+.ContactForm__input:focus, .ContactForm__message:focus {
+    background-color: rgba(255, 255, 255, 0.877);
 }
 
 .ContactForm__buttonContainer {
