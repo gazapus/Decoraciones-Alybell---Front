@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import useWindowSize from './useWindowSize';
 import Card from './Card';
-import ShopBanner from './ShopBanner';
+import BannerButton from './BannerButton';
 import { getScrollbarWidth } from '../utils/getScrollbarWidth.js';
 import '../styles/CardsPage.css';
 
@@ -73,6 +73,7 @@ function CardsPage() {
     const [largeCard, setLargeCard] = useState(1);
     const [cardsQuantity, setCardsQuantity] = useState(1);
     const [cardDatas, setCardDatas] = useState(cardDatas_test);
+    const [seeMore, setSeeMore] = useState(false);
 
     useEffect(() => {
         function adjustCards(columns) {
@@ -95,7 +96,7 @@ function CardsPage() {
     return (
         <div className="CardsPage">
             {cardDatas.map((data, index) =>
-                (index < cardsQuantity) ?
+                (index < cardsQuantity || seeMore) ?
                     <Card
                         imageURL={data.imageURL}
                         description={data.description}
@@ -106,7 +107,16 @@ function CardsPage() {
                     /> :
                     ''
             )}
-            {(cardsQuantity === cardDatas.length) ? '': ''}
+            {(cardsQuantity < cardDatas.length && !seeMore) ?
+                <div className="verMas">
+                    <BannerButton
+                        text="VER MAS"
+                        handleClick={() => setSeeMore(true)}
+                        color="red"
+                    />
+                </div>
+                : ''
+            }
         </div>
     );
 }

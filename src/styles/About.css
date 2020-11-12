@@ -1,0 +1,191 @@
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Bold.ttf);
+}
+
+@font-face {
+    font-family: Rajdhani-r;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+}
+
+.AbotContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.About {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: rgb(218, 156, 22);
+}
+
+.About__text {
+    width: 40%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 5% 2% 5% 4%;
+}
+
+.AboutDescription {
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.AboutDescription__pre {
+    color: red;
+    font-family: Rajdhani;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+}
+
+.AboutDescription__title {
+    font-size: 3em;
+    font-family: Rajdhani;
+    margin: 0;
+    flex: 1;
+}
+
+.AboutDescription__text {
+    font-family: Rajdhani-r;
+    font-size: 1.1em;
+    margin: 0;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding-top: 3%;
+}
+
+.AboutDetails {
+    height: 45%;
+    padding-top: 3%;
+}
+
+.AboutDetails__title {
+    font-family: Rajdhani;
+    font-size: 1.2em;
+}
+
+.AboutDetails__listContainer {
+    display: flex;
+}
+
+.AboutDetails__list {
+    flex: 1;
+    padding: 0;
+}
+
+.AboutDetails__item {
+    list-style: none;
+    font-family: Rajdhani-r;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    margin-bottom: 0.8em;
+}
+
+.About__media {
+    width: 40%;
+    height: 90%;
+    display: flex;
+}
+
+.AboutMedia__1image {
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+
+.AboutMedia__2images {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.AboutMedia__image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.014);
+}
+
+.AboutMedia__image:hover {
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .About {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .About__text {
+        width: 90%;
+        height: 70%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .AboutDescription {
+        height: 65%;
+        display: flex;
+        flex-direction: column;
+    }
+    .AboutDescription__pre {
+        font-size: 0.8em;
+        justify-content: center;
+    }
+    .AboutDescription__title {
+        font-size: 2em;
+        text-align: center;
+    }
+    .AboutDescription__text {
+        font-size: 1em;
+        padding-top: 0%;
+        text-align: center;
+    }
+    .AboutDetails {
+        height: auto;
+        padding-top: 2%;
+    }
+    .AboutDetails__title {
+        font-family: Rajdhani;
+        font-size: 1.1em;
+        text-align: center;
+        justify-content: center;
+        display: flex;
+    }
+    .AboutDetails__item {
+        font-size: 1em;
+        text-transform: capitalize;
+        margin-bottom: 0.5em;
+        text-align: center;
+    }
+    .About__media {
+        width: 90%;
+        height: 35%;
+    }
+    .AboutMedia__1image, .AboutMedia__2images {
+        height: 90%;
+    }
+
+}

@@ -13,7 +13,7 @@ import BannerButton from './components/BannerButton';
 import ContactScreen from './components/ContactScreen';
 import FullScreenPage from './components/FullScreenPage';
 import CardsPage from './components/CardsPage';
-import ShopBar from './components/ShopBar';
+import About from './components/About';
 
 function App() {
   const [imageSize, setImageSize] = useState("M");
@@ -43,7 +43,7 @@ function App() {
     <div className="App">
       <FullScreenPage
         backgroundImageSrc='https://i.ibb.co/d0jRB7w/Vintage-color-filter-cosmos-flower-field.jpg'
-        keyboardOpen = {keyobardOpen}
+        keyboardOpen={keyobardOpen}
       >
         <NavBar
           color={color + "a1"}
@@ -69,21 +69,19 @@ function App() {
           />
         </BannerText>
       </FullScreenPage>
-      <ShopBar
-        text="Visita nuestro E- Shop"
-        url="#"
-        logo={Meli}
-        backgroundImage="https://i.ibb.co/SKczfXW/Festive-Christmas-cozy-atmosphere-with-home-decor-and-tangerines-on-a-wooden-background-home-comfort.jpg"
-      />
-      <CardsPage>
-       
-      </CardsPage>
+      <CardsPage />
+      <FullScreenPage
+        color="#2A1481"
+        keyboardOpen={keyobardOpen}
+      >
+        <About/>
+      </FullScreenPage>
       <ScreenContainer
         backgroundImageSrc="https://i.ibb.co/5k3KVkX/11.jpg"
       >
         <ContactScreen
-          onOpenKeyboard={ () => setKeyboardOpen(true)}
-          onCloseKeyoboard={ () => setKeyboardOpen(false)}
+          onOpenKeyboard={() => setKeyboardOpen(true)}
+          onCloseKeyoboard={() => setKeyboardOpen(false)}
         />
       </ScreenContainer>
     </div>

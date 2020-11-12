@@ -6,3 +6,10 @@
     flex-wrap: wrap;
     width: 100%;
 }
+
+.verMas {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 2%;
+}
