@@ -18,9 +18,11 @@
     border-radius: 8pt;
     border-style: solid;
     box-sizing: border-box;
+    border-color: rgb(175, 0, 0);
     padding: 0 1em 0 1em;
     font-size: 1em;
     font-family: Abel;
+    background-color: rgba(255, 255, 255, 0.384);
 }
 
 .ContactForm__message {
@@ -34,6 +36,12 @@
     font-size: 1em;
     flex: 1;
     font-family: Abel;
+    border-color: rgb(175, 0, 0);
+    background-color: rgba(255, 255, 255, 0.384);
+}
+
+.ContactForm__input::placeholder, .ContactForm__message::placeholder {
+    color: rgb(58, 58, 58);
 }
 
 .ContactForm__buttonContainer {
@@ -60,6 +68,7 @@
         justify-content: center;
     }
 }
+
 @media(max-width: 1024px) and (max-height: 500px) {
     .ContactForm__input {
         width: 90%;

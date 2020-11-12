@@ -30,6 +30,7 @@ function ContactForm({onOpenKeyboard, onCloseKeyoboard}) {
                     text="ENVIAR"
                     handleClick={() => console.log("Ep")}
                     color="#afaaaa"
+                    size="S"
                 />
             </div>
         </form>
