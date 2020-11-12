@@ -19,9 +19,11 @@ function About() {
                             <ul className="AboutDetails__list">
                                 <li className="AboutDetails__item">web content</li>
                                 <li className="AboutDetails__item">web content2</li>
+                                <li className="AboutDetails__item">web content2</li>
                             </ul>
                             <ul className="AboutDetails__list">
                                 <li className="AboutDetails__item">web content3</li>
+                                <li className="AboutDetails__item">web content2</li>
                                 <li className="AboutDetails__item">web content4</li>
                             </ul>
                         </div>

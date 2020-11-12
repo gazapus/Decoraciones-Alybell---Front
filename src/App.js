@@ -5,7 +5,6 @@ import NavBar from './components/NavBar';
 import Logo from './components/Logo';
 import IconFacebook from './images/facebook.svg';
 import IconInstagram from './images/instagram.svg';
-import Meli from './images/meli.png';
 import Icon from './components/Icon';
 import useWindowSize from './components/useWindowSize';
 import BannerText from './components/BannerText';
@@ -14,6 +13,7 @@ import ContactScreen from './components/ContactScreen';
 import FullScreenPage from './components/FullScreenPage';
 import CardsPage from './components/CardsPage';
 import About from './components/About';
+import ShopSection from './components/ShopSection';
 
 function App() {
   const [imageSize, setImageSize] = useState("M");
@@ -70,6 +70,7 @@ function App() {
         </BannerText>
       </FullScreenPage>
       <CardsPage />
+      <ShopSection/>
       <FullScreenPage
         color="#2A1481"
         keyboardOpen={keyobardOpen}

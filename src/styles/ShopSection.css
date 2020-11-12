@@ -1,0 +1,75 @@
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Bold.ttf);
+}
+
+@font-face {
+    font-family: Rajdhani-r;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+}
+
+.ShopSection {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Shop {
+    width: 70%;
+    background-color: rgb(235, 43, 43);
+    border-radius: 0 20vw 0 20vw;
+    box-sizing: border-box;
+    padding: 4% 5% 4% 5%;
+    margin: 3%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    filter: drop-shadow(6px 6px 5px rgb(34, 34, 34));
+    transition-duration: 1s;
+    overflow: hidden;
+}
+
+.Shop:hover {
+    filter: drop-shadow(-6px -6px 5px rgb(34, 34, 34))
+
+}
+
+.Shop__text {
+    width: 75%;
+}
+
+.Shop__title {
+    font-family: Rajdhani;
+    font-size: 2em;
+    margin: 0;
+}
+
+.Shop__description {
+    margin: 1% 0 0 0;
+    font-family: Rajdhani-r;
+    font-size: 1.2em;
+}
+
+.Shop__buttonContainer {
+    width: 25%;
+}
+
+@media (max-width: 1024px) {
+    .Shop {
+        width: 90%;
+        padding: 4% 0% 4% 0%;
+        border-radius: 0 10vw 0 10vw;
+        flex-direction: column;
+    }
+    .Shop__text {
+        width: 80%;
+    }
+    .Shop__buttonContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 5%;
+        box-sizing: border-box;
+    }
+}
