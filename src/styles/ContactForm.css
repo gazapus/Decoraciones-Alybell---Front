@@ -68,21 +68,16 @@
         justify-content: center;
     }
 }
-
-/*
-@media(max-width: 1024px) and (max-height: 500px) {
+@media (orientation: portrait) and (min-width: 700px) and (min-height: 1023px) {
     .ContactForm__input {
         width: 90%;
-        height: 2.3em;
-        margin: 0.2em;
+        height: 3.5em;
+        margin: 0.3em;
+        font-size: 1.4em;
     }
     .ContactForm__message {
         width: 90%;
-        min-height: 3em;
-        margin: 0.2em;
+        min-height: 3.5em;
+        font-size: 1.4em;
     }
-    .ContactForm__buttonContainer {
-        width: 90%;
-        justify-content: center;
-    }
-}*/
+}

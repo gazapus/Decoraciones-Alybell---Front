@@ -84,33 +84,6 @@
     }
 }
 
-/*LANDSCAPE MOBIL
-@media(max-width: 1024px) and (orientation: landscape) {
-    .ContactScreen__container {
-        width: 97%;
-        height: 97%;
-        flex-direction: row;
-    }
-    .Form {
-        width: 50%;
-    }
-    .Form__header {
-        justify-content: flex-start;
-    }
-    .Form__title {
-        font-size: 2em;
-    }
-    .Form__subtitle {
-        font-size: 0.8em;
-        margin: 0;
-    }
-    .Form__networks {
-        height: auto;
-        flex-direction: row;
-        padding-left: 5%;
-    }
-}*/
-
 @media (max-width: 1024px) {
     .ContactScreen__container {
         width: 95%;
@@ -147,7 +120,7 @@
 
 /* LANDSCAPE MOBIL */
 
-@media(max-width: 1024px) and (orientation: landscape) and (min-height: 330px){
+@media(max-width: 1024px) and (orientation: landscape) and (min-height: 330px) {
     .ContactScreen__container {
         width: 97%;
         height: 97%;
@@ -161,5 +134,28 @@
     }
     .Form__networks {
         display: none;
+    }
+}
+
+/* IPAD */
+
+@media (orientation: portrait) and (min-width: 700px) and (min-height: 1023px) {
+    .Form {
+        height: 60%;
+    }
+    .Map {
+        height: 30%;
+    }
+    .Form__title {
+        font-size: 3em;
+        text-align: center;
+    }
+    .Form__subtitle {
+        font-size: 1.3em;
+        margin: 0;
+        text-align: center;
+    }
+    .Form__inputs {
+        width: 80%;
     }
 }
