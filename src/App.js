@@ -13,6 +13,9 @@ import FullScreenPage from './components/FullScreenPage';
 import CardsPage from './components/CardsPage';
 import About from './components/About';
 import ShopSection from './components/ShopSection';
+import Footer from './components/Footer';
+import Email from './images/email.svg';
+import Meli from './images/meli.png';
 
 function App() {
   const [imageSize, setImageSize] = useState("M");
@@ -69,15 +72,14 @@ function App() {
         </BannerText>
       </FullScreenPage>
       <CardsPage />
-      <ShopSection/>
+      <ShopSection />
       <FullScreenPage
         color="#ffffff00"
         keyboardOpen={keyobardOpen}
       >
-        <About/>
+        <About />
       </FullScreenPage>
       <FullScreenPage
-        /*backgroundImageSrc="https://i.ibb.co/5k3KVkX/11.jpg"*/
         keyboardOpen={keyobardOpen}
         color="#ffffff00"
 
@@ -87,6 +89,34 @@ function App() {
           onCloseKeyoboard={() => setKeyboardOpen(false)}
         />
       </FullScreenPage>
+      <Footer
+        networksIcons={[
+          <Icon
+            image={IconFacebook}
+            url={"#"}
+            size={"XS"}
+            key={1}
+          />,
+          <Icon
+            image={IconInstagram}
+            url={"#"}
+            size={"XS"}
+            key={2}
+          />,
+          <Icon
+            image={Email}
+            url={"#"}
+            size={"XS"}
+            key={3}
+          />,
+          <Icon
+            image={Meli}
+            url={"#"}
+            size={"XS"}
+            key={4}
+          />
+        ]}
+      />
     </div>
   );
 }
