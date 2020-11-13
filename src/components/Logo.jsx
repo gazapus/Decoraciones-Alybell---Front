@@ -1,5 +1,5 @@
 import '../styles/Logo.css';
-import SolucionImage from '../images/solucion.png';
+import Rose from '../images/rosa.svg';
 /** 
  * Represents the logo of Decoraciones Alybell
  *
@@ -7,7 +7,7 @@ import SolucionImage from '../images/solucion.png';
 function Logo() {
     return(
         <div className="Logo">
-            <img src={SolucionImage} alt="" className="Logo__image"/>
+            <img src={Rose} alt="" className="Logo__image"/>
             <h1 className="Logo__text">Decoraciones Alybell</h1>
         </div>
     )

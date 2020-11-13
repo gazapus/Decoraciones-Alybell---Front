@@ -18,7 +18,7 @@
     border-radius: 8pt;
     border-style: solid;
     box-sizing: border-box;
-    border-color: rgb(0, 0, 0);
+    border-color:  rgb(41, 41, 41);
     font-size: 1em;
     font-family: Abel;
     background-color: rgba(255, 255, 255, 0.596);
@@ -30,7 +30,7 @@
     min-height: 3em;
     margin: 1em 0 1em 0;
     border-radius: 8pt;
-    border-color: rgb(0, 0, 0);
+    border-color: rgb(41, 41, 41);
     border-width: 2px;
     border-style: solid;
     box-sizing: border-box;
@@ -39,6 +39,7 @@
     font-family: Abel;
     background-color: rgba(255, 255, 255, 0.384);
     text-indent: 1em;
+    resize: none;
 }
 
 .ContactForm__input::placeholder, .ContactForm__message::placeholder {

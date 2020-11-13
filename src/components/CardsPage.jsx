@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import useWindowSize from './useWindowSize';
 import Card from './Card';
-import BannerButton from './BannerButton';
+import Button from './Button';
 import { getScrollbarWidth } from '../utils/getScrollbarWidth.js';
 import '../styles/CardsPage.css';
 
@@ -67,7 +67,10 @@ const cardDatas_test = [{
     redirectURL: "#"
 },];
 
-
+/** 
+ * Represents the card container
+ ** This adjust the large and distribution of the cards on the parent element
+ */
 function CardsPage() {
     const [width, height] = useWindowSize();
     const [largeCard, setLargeCard] = useState(1);
@@ -109,7 +112,7 @@ function CardsPage() {
             )}
             {(cardsQuantity < cardDatas.length && !seeMore) ?
                 <div className="verMas">
-                    <BannerButton
+                    <Button
                         text="VER MAS"
                         handleClick={() => setSeeMore(true)}
                         color="red"

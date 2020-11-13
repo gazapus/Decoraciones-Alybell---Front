@@ -2,9 +2,9 @@ import '../styles/Icon.css';
 /** 
  * Represents an icon with an url to access on click
  * @constructor
- * @param {image} image - Image source of the icon
- * @param {String} url - Url to access on click
- * @param {String} size - Size of the icon: XS|S|M|L|XL
+ * @prop {image} image - Image source of the icon
+ * @prop {String} url - Url to access on click
+ * @prop {String} size - Size of the icon: XS|S|M|L|XL
  */
 function Icon ( {image, url="#", size}) {
     let iconSize;

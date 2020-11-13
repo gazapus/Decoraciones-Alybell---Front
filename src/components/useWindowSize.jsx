@@ -1,5 +1,8 @@
 import { useLayoutEffect, useState } from 'react';
 
+/** 
+ * Hooks that return the current window width and height as an array [width, height]
+ */
 function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
     useLayoutEffect(() => {

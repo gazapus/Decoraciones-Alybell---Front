@@ -1,14 +1,23 @@
 import '../styles/About.css';
 
-function About() {
+/** 
+ * Represents the 'about us' page section
+ * @constructor
+ * @prop {string} backgroundColor - Background color
+ * @prop {string} textColor - Text color
+ */
+
+function About({ backgroundColor = "#000", textColor = "#fff"}) {
+
     return (
         <div className="AbotContainer">
-            <div className="About">
-                <div className="About__text">
+            <div className="About" style={{ backgroundColor: backgroundColor}}>
+                <div className="About__text" style={{color: textColor }}>
                     <div className="AboutDescription">
-                        <span className="AboutDescription__pre">ACERCA DE NOSOTROS</span>
+                        <span className="AboutDescription__pre" style={{filter: 'invert(100%)'}}>ACERCA DE NOSOTROS</span>
                         <h3 className="AboutDescription__title">A RICH FEATURED, EPIC y PREMIUM WORK</h3>
-                        <p className="AboutDescription__text">Suspendisse facilisis commodo lobortis. Nullam mollis lobortis ex vel faucibus.
+                        <p className="AboutDescription__text">
+                            Suspendisse facilisis commodo lobortis. Nullam mollis lobortis ex vel faucibus.
                             Proin nec viverra turpis. Nulla eget justo scelerisque, pretium purus vel, congue
                             libero. Suspendisse potenti.
                         </p>

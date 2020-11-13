@@ -5,14 +5,14 @@ import { useEffect, useState } from "react";
 /** 
  * Represents a container that covers the height and width of the screen
  * @constructor
- * @param {string} backgroundImageSrc - Optional: The url of the background image
- * @param {string} color - Color in Hexadecimal of the background. Default: #000
- * @param {boolean} keyboardOpen - Define if the mobile keyboard is open. Default = false
+ * @prop {string} backgroundImageSrc - Optional: The url of the background image
+ * @prop {string} backgroundColor - Color in Hexadecimal of the background. Default: #000
+ * @prop {boolean} keyboardOpen - Define if the mobile keyboard is open. Default = false
  */
 function FullScreenPage({
     keyboardOpen = false,
     backgroundImageSrc,
-    color = "#000",
+    backgroundColor = "#00000000",
     children
 }) {
     // eslint-disable-next-line no-unused-vars
@@ -26,7 +26,7 @@ function FullScreenPage({
         if (backgroundImageSrc) {
             newStyle = { backgroundImage: 'url(' + backgroundImageSrc + ')' };
         } else {
-            newStyle = { backgroundColor: color };
+            newStyle = { backgroundColor: backgroundColor };
         }
         if (keyboardOpen) {
             newStyle.height = originalHeight + 'px';

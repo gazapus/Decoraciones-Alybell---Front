@@ -7,7 +7,7 @@ import IconInstagram from './images/instagram.svg';
 import Icon from './components/Icon';
 import useWindowSize from './components/useWindowSize';
 import BannerText from './components/BannerText';
-import BannerButton from './components/BannerButton';
+import Button from './components/Button';
 import ContactScreen from './components/ContactScreen';
 import FullScreenPage from './components/FullScreenPage';
 import CardsPage from './components/CardsPage';
@@ -32,7 +32,9 @@ function App() {
     }
   }, [width])
 
-  const color = "#01b774";
+  const colorPrimary = "#0B72AE";
+  const colorSecundary = "#FF8D01";
+
   const fbURL = "https://www.facebook.com";
   const igURL = "https://www.instagram.com";
   const subText = [
@@ -48,7 +50,6 @@ function App() {
         keyboardOpen={keyobardOpen}
       >
         <NavBar
-          color={color + "a1"}
           leftItems={<Logo />}
           rightItems={[
             <Icon image={IconFacebook} url={fbURL} key="fb" size={imageSize} />,
@@ -59,30 +60,27 @@ function App() {
           mainText="LUCES Y DECORACIONES PARA TU HOGAR Y EVENTO"
           subText={subText}
         >
-          <BannerButton
+          <Button
             text="SHOP"
             handleClick={() => console.log("a")}
-            color={color}
           />
-          <BannerButton
+          <Button
             text="CONTACTO"
             handleClick={() => console.log("ab")}
-            color={color}
           />
         </BannerText>
       </FullScreenPage>
       <CardsPage />
       <ShopSection />
       <FullScreenPage
-        color="#ffffff00"
         keyboardOpen={keyobardOpen}
       >
-        <About />
+        <About 
+          
+        />
       </FullScreenPage>
       <FullScreenPage
         keyboardOpen={keyobardOpen}
-        color="#ffffff00"
-
       >
         <ContactScreen
           onOpenKeyboard={() => setKeyboardOpen(true)}

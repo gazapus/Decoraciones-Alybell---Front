@@ -1,14 +1,30 @@
 import '../styles/BannerText.css';
 import { useEffect, useState } from 'react';
 
-
-function BannerText({ mainText = "", subText = [], children }) {
+/** 
+ * Represents the text on the banner page
+ * @constructor
+ * @prop {string} mainText - main text to show first
+ * @prop {array} subText - String's Array of secondary text that run the animation on the banner
+ * @param {string} mainTextColor - Main text color
+ * @param {string} secondaryTextColor - Secondary text color
+ * @param {string} secondaryTextBGColor - Secondary text background color
+ * @param {children} children - Buttons that will show under the subText
+ */
+function BannerText({ 
+    mainText, 
+    subText = [], 
+    mainTextColor = "#000",
+    secondaryTextColor = "#000",
+    secondaryTextBGColor = "#AEAEAE",
+    children,
+}) {
     const [currentTextIndex, setCurrentTextIndex] = useState(0);
     const [textClass, setTextClass] = useState("");
     const [openingText, setOpeningText] = useState(true);
 
     useEffect( () => {
-        run()
+        runAnimation()
     }, [])
 
 
@@ -20,7 +36,7 @@ function BannerText({ mainText = "", subText = [], children }) {
         }
     }
 
-    function run() {
+    function runAnimation() {
         if (openingText) {
             setTimeout(() => {
                 setTextClass('SubText__text-out');
@@ -35,11 +51,12 @@ function BannerText({ mainText = "", subText = [], children }) {
 
     return (
         <div className="BannerText">
-            <h2 className="BannerText__main">{mainText}</h2>
-            <div className="SubText">
+            <h2 className="BannerText__main" style={{color: mainTextColor}}>{mainText}</h2>
+            <div className="SubText" style={{backgroundColor: secondaryTextBGColor}}> 
                 <p
                     className={`SubText__text ${textClass}`}
-                    onTransitionEnd={run}
+                    onTransitionEnd={runAnimation}
+                    style={{color: secondaryTextColor}}
                 >
                     {subText[currentTextIndex]}
                 </p>

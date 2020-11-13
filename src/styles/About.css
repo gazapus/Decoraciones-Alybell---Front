@@ -22,7 +22,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: rgb(218, 156, 22);
 }
 
 .About__text {
@@ -40,7 +39,6 @@
 }
 
 .AboutDescription__pre {
-    color: red;
     font-family: Rajdhani;
     font-size: 1em;
     letter-spacing: 0.1em;

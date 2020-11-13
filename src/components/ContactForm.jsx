@@ -1,7 +1,15 @@
 import '../styles/ContactForm.css';
-import BannerButton from './BannerButton';
+import Button from './Button';
 
-function ContactForm({onOpenKeyboard, onCloseKeyoboard}) {
+/** 
+ * Represents contact form component
+ * @constructor
+ * @prop {function} onOpenKeyboard - function to run when focus an input
+ * @prop {function} onCloseKeyoboard - function to run when blur an input
+ * @prop {string} buttonBgColor - background color button
+ * @prop {string} buttonTextColor - text color button
+ */
+function ContactForm({onOpenKeyboard, onCloseKeyoboard, buttonBgColor="#000", buttonTextColor="#fff" }) {
     return (
         <form className="ContactForm">
             <input 
@@ -26,10 +34,11 @@ function ContactForm({onOpenKeyboard, onCloseKeyoboard}) {
                 onBlur={onCloseKeyoboard}
             />
             <div className="ContactForm__buttonContainer">
-                <BannerButton
+                <Button
                     text="ENVIAR"
                     handleClick={() => console.log("Ep")}
-                    color="#afaaaa"
+                    backgroundColor={buttonBgColor}
+                    textColor={buttonTextColor}
                     size="S"
                 />
             </div>

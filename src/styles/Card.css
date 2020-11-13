@@ -9,7 +9,7 @@
 }
 
 .Card {
-    background-color: rgb(43, 0, 0);
+    background-color: rgba(255, 255, 255, 0.514);
     overflow: hidden;
 }
 
@@ -93,7 +93,6 @@
 
 .CardDescription__price {
     flex: 1;
-    background-color: rgb(177, 177, 177);
     margin: 0;
     width: 100%;
     display: flex;
