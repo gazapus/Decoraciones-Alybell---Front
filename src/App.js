@@ -31,10 +31,7 @@ function App() {
       setImageSize("M");
     }
   }, [width])
-
-  const colorPrimary = "#0B72AE";
-  const colorSecundary = "#FF8D01";
-
+  
   const fbURL = "https://www.facebook.com";
   const igURL = "https://www.instagram.com";
   const subText = [
