@@ -65,3 +65,27 @@
         font-size: 0.9em;
     }
 }
+
+/* width */
+
+.Modal__content::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+
+.Modal__content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+
+.Modal__content::-webkit-scrollbar-thumb {
+    background: rgb(88, 88, 88);
+}
+
+/* Handle on hover */
+
+.Modal__content::-webkit-scrollbar-thumb:hover {
+    background: rgb(49, 49, 49);
+}
