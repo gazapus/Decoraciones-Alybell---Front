@@ -1,0 +1,35 @@
+.LoginForm {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 129, 129);
+    padding: 7vmin 3vmin 7vmin 3vmin;
+    border-radius: 10px;
+}
+
+.LoginForm__errorMessage {
+    color: red;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.LoginForm__label {
+    font-size: 1.2em;
+    margin: 0.6em 0 0.1em 0;
+}
+
+.LoginForm__input {
+    font-size: 1.1em;
+    border-radius: 5px;
+    border-style: solid;
+    padding: 0.3em;
+    width: 17em;
+    height: 1.7em;
+}
+
+.LoginForm__buttonContainer {
+    margin: 4vmax 0 1vmax 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

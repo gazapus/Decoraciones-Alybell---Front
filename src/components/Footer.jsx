@@ -8,7 +8,7 @@ import '../styles/Footer.css';
  * @prop {array} backgroundColor - Background color 
  * @prop {array} textColor - Text color
  */
-function Footer({networksIcons, backgroundColor="#000", textColor="#fff"}) {
+function Footer({networksIcons=[], backgroundColor="#000", textColor="#fff"}) {
     return(
         <div className="Footer" style={{backgroundColor: backgroundColor}}>
             <div className="Footer__icons">
