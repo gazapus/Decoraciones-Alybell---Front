@@ -25,6 +25,7 @@ function BannerText({
 
     useEffect( () => {
         runAnimation()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 

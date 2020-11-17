@@ -2,6 +2,14 @@ import { useEffect, useState } from 'react';
 import '../styles/LoginForm.css';
 import Button from './Button';
 
+/** 
+ * Login Form, contains username and password field
+ * @constructor
+ * @prop {string} backgroundColor 
+ * @prop {string} textColor 
+ * @prop {function} handleLogin - function to call when the data is sended
+ * @prop {string} errorLogin - error message to show
+ */
 function LoginForm({ backgroundColor = "#000", textColor = "#fff", handleLogin, errorLogin }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -21,7 +29,6 @@ function LoginForm({ backgroundColor = "#000", textColor = "#fff", handleLogin, 
         e.preventDefault();
         if(validInputs){
             setErrorMessage("")
-            console.log("ok")
             handleLogin(username, password);
         } else {
             setErrorMessage("Debe ingresar un usuario y contraseña")
