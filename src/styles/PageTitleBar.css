@@ -1,0 +1,40 @@
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Bold.ttf);
+}
+
+.PageTitleBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 2vh 0 1vh 0;
+}
+
+.PageTitleBar__title {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 2em;
+    font-family: Rajdhani;
+    margin: 0;
+}
+
+.PageTitleBar__arrow {
+    font-size: 2.5em;
+    margin: 0;
+    margin-left: 1vw;
+    padding: 0;
+    border-style: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.PageTitleBar__arrow:hover {
+    cursor: pointer;
+    color: rgb(143, 0, 0);
+    transition-duration: 0.4s;
+}
+
+.PageTitleBar__arrow:focus {
+    outline: none;
+    color: rgb(218, 0, 0);
+}

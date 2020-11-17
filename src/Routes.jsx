@@ -5,6 +5,7 @@ import pathNames from './utils/pathnames';
 import Test from './test';
 import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
+import Products from './pages/ProductsPage';
 
 function Routes() {
     return (
@@ -13,6 +14,8 @@ function Routes() {
             <Route exact path={"/test"} component={Test} />
             <Route exact path={pathNames.login} component={Login} />
             <Route exact path={pathNames.admin} component={Dashboard} />
+            <Route exact path={pathNames.products} component={Products} />
+
 
         </Switch>
     );

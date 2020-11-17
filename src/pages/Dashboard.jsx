@@ -36,7 +36,7 @@ function Dashboard() {
                             <CardButton
                                 backgroundImage="https://pamsoft.es/wp-content/uploads/2016/02/catalogo-online.jpg"
                                 text="PRODUCTOS"
-                                handleClick={() => { }}
+                                handleClick={() => { history.push(pathNames.products)}}
                             />
                             <CardButton
                                 backgroundImage="https://www.marketingregistrado.com/img/noticias/redes-sociales-google.jpg"

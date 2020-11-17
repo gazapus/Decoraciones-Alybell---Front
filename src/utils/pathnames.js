@@ -1,5 +1,6 @@
 module.exports = {
     home: '/',
     login: '/login',
-    admin: '/dashboard'
+    admin: '/dashboard',
+    products: '/dashboard/products'
 }
