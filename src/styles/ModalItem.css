@@ -1,0 +1,30 @@
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Bold.ttf);
+}
+
+@font-face {
+    font-family: Rajdhani-R;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+}
+.ModalItem {
+    display: flex;
+    flex-direction: column;
+    padding: 1vmax 3vmax 3vmax 1vmax;
+    align-items: center;
+}
+
+.ModalItem__img {
+    width: 80%;
+}
+
+.ModalItem__label {
+    font-size: 1.2em;
+    font-family: Rajdhani;
+    margin-top: 1vmax;
+}
+
+.ModalItem__text {
+    font-size: 1.1em;
+    font-family: Rajdhani-R;
+}

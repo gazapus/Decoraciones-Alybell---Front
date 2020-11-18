@@ -1,0 +1,110 @@
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Bold.ttf);
+}
+
+@font-face {
+    font-family: Rajdhani-R;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+}
+
+.Table {
+    width: 80%;
+    border-collapse: collapse;
+    border-bottom: 1px solid rgb(82, 82, 82);
+}
+
+.Table_th {
+    padding: 1vw;
+    background-color: rgb(0, 0, 0);
+    border-bottom: 1px solid rgb(82, 82, 82);
+    font-family: Rajdhani;
+    font-size: 1.2em;
+    color: white;
+}
+
+.Table_td {
+    font-family: Rajdhani-R;
+    font-size: 1.1em;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    border-bottom: 1px solid rgb(82, 82, 82);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 5em;
+    white-space: nowrap;
+}
+
+.Table_tr:hover {
+    background-color: rgba(72, 190, 3, 0.445) !important;
+    cursor: pointer;
+    transition-duration: 0.3s;
+}
+
+.Table_tr:nth-child(even) {
+    background-color: #dfdfdfb9;
+}
+
+.Table_tr:nth-child(odd) {
+    background-color: #ffffffde;
+}
+
+.Table__image {
+    width: 2.5em;
+}
+
+.Table__Addbutton {
+    font-family: Rajdhani;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.795);
+    font-size: 1.1em;
+    padding: 1vmax;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    margin: 2vmax;
+    transition-duration: 0.4s;
+}
+
+.Table__Addbutton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.808);
+}
+
+.Table__button {
+    font-family: Rajdhani-R;
+    color: rgb(0, 0, 0);
+    background-color: rgb(233, 233, 233);
+    font-size: 1em;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    padding: 0.2em 0.4em 0.2em 0.4em;
+    transition-duration: 0.3s;
+}
+
+.red_background {
+    background-color: rgb(253, 133, 133);
+}
+
+.blue_background {
+    background-color: rgb(134, 173, 255);
+}
+
+.Table__button:hover {
+    cursor: pointer;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.644);
+}
+
+@media (max-width: 800px) {
+    .Table {
+        width: 98%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Table {
+        width: 90%;
+    }
+}

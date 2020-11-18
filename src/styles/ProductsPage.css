@@ -6,3 +6,12 @@
     background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
     overflow-y: auto;
 }
+
+.ProductPage__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+}
