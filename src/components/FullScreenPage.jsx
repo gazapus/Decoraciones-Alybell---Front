@@ -1,5 +1,5 @@
 import '../styles/FullScreenPage.css';
-import useWindowSize from "./useWindowSize";
+import useWindowSize from "../hooks/useWindowSize";
 import { useEffect, useState } from "react";
 
 /** 

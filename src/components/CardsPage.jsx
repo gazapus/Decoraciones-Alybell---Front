@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import useWindowSize from './useWindowSize';
+import useWindowSize from '../hooks/useWindowSize';
 import Card from './Card';
 import Button from './Button';
 import { getScrollbarWidth } from '../utils/getScrollbarWidth.js';

@@ -18,7 +18,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgba(201, 201, 201, 0.897);
+    background-color: rgba(201, 201, 201, 0.945);
     padding: 1em;
     box-sizing: border-box;
     overflow: auto;
@@ -33,18 +33,20 @@
 .Modal__button {
     margin: 1em;
     border-style: solid;
-    border-color: red;
+    border-color: rgba(201, 0, 0, 0.89);
     border-width: 2.5px;
-    background-color: rgba(37, 37, 37, 0.938);
-    color: red;
+    background-color: rgba(37, 37, 37, 0.952);
+    color: rgb(207, 0, 0);
     box-sizing: border-box;
     padding: 0.5em;
-    font-size: 1em;
+    font-size: 0.9em;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .Modal__button:hover {
     cursor: pointer;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.726);
+    transition-duration: 0.3s;
 }
 
 @media (max-width: 800px) and (orientation: portrait) {

@@ -5,7 +5,7 @@ import Logo from './components/Logo';
 import IconFacebook from './images/facebook.svg';
 import IconInstagram from './images/instagram.svg';
 import Icon from './components/Icon';
-import useWindowSize from './components/useWindowSize';
+import useWindowSize from './hooks/useWindowSize';
 import BannerText from './components/BannerText';
 import Button from './components/Button';
 import ContactScreen from './components/ContactScreen';

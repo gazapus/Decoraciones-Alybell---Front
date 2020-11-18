@@ -6,23 +6,28 @@ import PageTitleBar from '../components/PageTitleBar';
 import { useState, useEffect } from 'react';
 import ProductService from '../services/product.service';
 import Modal from '../components/Modal';
+import useLoggedUser from '../hooks/userLogged';
 import '../styles/Table.css';
 import '../styles/ModalItem.css';
 
 function ProductPage() {
     const [productsData, setProductsData] = useState([]);
     const [modalData, setModalData] = useState({});
+    let userLogged = useLoggedUser();
 
     useEffect(() => {
-        ProductService.getAll()
-            .then((response) => {
-                setProductsData(response.data);
-            })
-            .catch(err => {
-                alert("ERROR: No se pudo traer los datos");
-            })
-    }, [])
+        if (userLogged) {
+            ProductService.getAll()
+                .then((response) => {
+                    setProductsData(response.data);
+                })
+                .catch(err => {
+                    alert("ERROR: No se pudo traer los datos");
+                })
+        }
+    }, [userLogged])
 
+    if(!userLogged) return <div></div>
 
     return (
         <div className="ProductPage">
@@ -46,21 +51,21 @@ function ProductPage() {
                         </tr>
                     </thead>
                     <tbody className="Table_tbody">
-                        {productsData.map((e, index) => 
-                            <Row 
-                                product={e} 
-                                key={index} 
+                        {productsData.map((e, index) =>
+                            <Row
+                                product={e}
+                                key={index}
                                 setModalData={setModalData}
                             />)}
                     </tbody>
                 </table>
             </div>
-        <Modal
-            open={modalData.description}
-            onClose={() => setModalData({})}
-        >
-            <ModalContent product={modalData}/>
-        </Modal>
+            <Modal
+                open={modalData.description}
+                onClose={() => setModalData({})}
+            >
+                <ModalContent product={modalData} />
+            </Modal>
         </div>
     )
 }
@@ -69,15 +74,15 @@ function Row({ product, setModalData }) {
     return (
         <tr className="Table_tr">
             <td className="Table_td">
-                <button 
+                <button
                     className="Table__button"
-                    onClick={() => setModalData(product) }
+                    onClick={() => setModalData(product)}
                 >
                     VER
                 </button>
             </td>
             <td className="Table_td">
-                <img className="Table__image" src={product.imageURL} alt=""/>
+                <img className="Table__image" src={product.imageURL} alt="" />
             </td>
             <td className="Table_td">{product.description}</td>
             <td className="Table_td">{product.price}</td>
@@ -88,10 +93,10 @@ function Row({ product, setModalData }) {
     )
 }
 
-function ModalContent({product}) {
-    return(
+function ModalContent({ product }) {
+    return (
         <div className="ModalItem">
-            <img className="ModalItem__img" src={product.imageURL} alt=""/>
+            <img className="ModalItem__img" src={product.imageURL} alt="" />
             <span className="ModalItem__label">DESCRIPCIÓN:</span>
             <span className="ModalItem__text">{product.description}</span>
             <span className="ModalItem__label">PRECIO:</span>
