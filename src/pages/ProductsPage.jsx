@@ -7,13 +7,16 @@ import { useState, useEffect } from 'react';
 import ProductService from '../services/product.service';
 import Modal from '../components/Modal';
 import useLoggedUser from '../hooks/userLogged';
+import {useHistory} from 'react-router-dom';
 import '../styles/Table.css';
 import '../styles/ModalItem.css';
+import pathnames from '../utils/pathnames';
 
 function ProductPage() {
     const [productsData, setProductsData] = useState([]);
     const [modalData, setModalData] = useState({});
     let userLogged = useLoggedUser();
+    let history = useHistory();
 
     useEffect(() => {
         if (userLogged) {
@@ -27,7 +30,7 @@ function ProductPage() {
         }
     }, [userLogged])
 
-    if(!userLogged) return <div></div>
+    if (!userLogged) return <div></div>
 
     return (
         <div className="ProductPage">
@@ -37,7 +40,7 @@ function ProductPage() {
             />
             <PageTitleBar>PRODUCTOS</PageTitleBar>
             <div className="ProductPage__content">
-                <button className="Table__Addbutton">AGREGAR PRODUCTO</button>
+                <button className="Table__Addbutton" onClick={() => history.push(pathnames.product_edit)}>AGREGAR PRODUCTO</button>
                 <table className="Table">
                     <thead className="Table_thead">
                         <tr className="Table_tr">
@@ -71,6 +74,7 @@ function ProductPage() {
 }
 
 function Row({ product, setModalData }) {
+    let history = useHistory();
     return (
         <tr className="Table_tr">
             <td className="Table_td">
@@ -87,8 +91,25 @@ function Row({ product, setModalData }) {
             <td className="Table_td">{product.description}</td>
             <td className="Table_td">{product.price}</td>
             <td className="Table_td">{product.shopURL}</td>
-            <td className="Table_td"><button className="Table__button blue_background">Modificar</button></td>
-            <td className="Table_td"><button className="Table__button red_background">Eliminar</button></td>
+            <td className="Table_td">
+                <button
+                    className="Table__button blue_background"
+                    onClick={() => history.push({
+                        pathname: pathnames.product_edit,
+                        state: product
+                    })}
+                >
+                    Modificar
+                </button>
+            </td>
+            <td className="Table_td">
+                <button 
+                    className="Table__button red_background"
+                    onClick={() => {ProductService.remove(product.id); history.go(0)}}
+                >
+                    Eliminar
+                </button>
+            </td>
         </tr>
     )
 }

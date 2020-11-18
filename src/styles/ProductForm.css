@@ -1,0 +1,79 @@
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Bold.ttf);
+}
+
+@font-face {
+    font-family: Rajdhani-r;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+}
+
+.ProductForm {
+    width: 40%;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 1vmax;
+    margin-bottom: 1vmax;
+    border-style: solid;
+}
+
+.ProductForm__errorMessage {
+    color: red;
+    text-align: center;
+}
+
+.ProductForm__image {
+    width: 15vmax;
+    height: 15vmax;
+    background-size: cover;
+    background-position: center;
+    background-color: grey;
+}
+
+.ProductForm__label {
+    font-family: Rajdhani-r;
+    font-size: 1.1em;
+    margin-top: 1em;
+}
+
+.ProductForm__input {
+    font-family: Rajdhani-r;
+    font-size: 1.1em;
+    width: 90%;
+    height: 2.5em;
+    text-indent: 0.5em;
+}
+
+.ProductForm__input::placeholder {
+    color: rgb(192, 192, 192);
+}
+
+.ProductForm__textArea {
+    height: 5em;
+    resize: none;
+}
+
+.ProductForm__buttonContainer {
+    margin: 2vmax;
+}
+
+@media(max-width: 1200px) {
+    .ProductForm {
+        width: 50%;
+    }
+}
+
+@media(max-width: 1000px) {
+    .ProductForm {
+        width: 60%;
+    }
+}
+
+@media(max-width: 800px) {
+    .ProductForm {
+        width: 90%;
+    }
+}

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: Rajdhani;
+    src: url(../fonts/Rajdhani-Bold.ttf);
+}
+
+@font-face {
+    font-family: Rajdhani-R;
+    src: url(../fonts/Rajdhani-Regular.ttf);
+}
+
+.EditProduct {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+    overflow-y: auto;
+}
+
+.EditProduct__form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
