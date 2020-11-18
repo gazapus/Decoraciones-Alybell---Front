@@ -1,4 +1,4 @@
-.ProductPage {
+.itemPage {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -7,7 +7,7 @@
     overflow-y: auto;
 }
 
-.ProductPage__content {
+.itemPage__content {
     width: 100%;
     display: flex;
     flex-direction: column;

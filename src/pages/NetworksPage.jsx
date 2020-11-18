@@ -4,7 +4,7 @@ import Logo from '../components/Logo';
 import LogoutButton from '../components/LogoutButton';
 import PageTitleBar from '../components/PageTitleBar';
 import { useState, useEffect } from 'react';
-import ProductService from '../services/product.service';
+import NetworkService from '../services/network.service';
 import Modal from '../components/Modal';
 import useLoggedUser from '../hooks/userLogged';
 import {useHistory} from 'react-router-dom';
@@ -12,17 +12,17 @@ import '../styles/Table.css';
 import '../styles/ModalItem.css';
 import pathnames from '../utils/pathnames';
 
-function ProductPage() {
-    const [productsData, setProductsData] = useState([]);
+function NetworkPage() {
+    const [networksData, setNetworksData] = useState([]);
     const [modalData, setModalData] = useState({});
     let userLogged = useLoggedUser();
     let history = useHistory();
 
     useEffect(() => {
         if (userLogged) {
-            ProductService.getAll()
+            NetworkService.getAll()
                 .then((response) => {
-                    setProductsData(response.data);
+                    setNetworksData(response.data);
                 })
                 .catch(err => {
                     alert("ERROR: No se pudo traer los datos");
@@ -38,25 +38,24 @@ function ProductPage() {
                 leftItems={<Logo />}
                 rightItems={<LogoutButton />}
             />
-            <PageTitleBar route={pathnames.admin}>PRODUCTOS</PageTitleBar>
+            <PageTitleBar route={pathnames.admin}>REDES</PageTitleBar>
             <div className="itemPage__content">
-                <button className="Table__Addbutton" onClick={() => history.push(pathnames.product_edit)}>AGREGAR PRODUCTO</button>
+                <button className="Table__Addbutton" onClick={() => history.push(pathnames.network_edit)}>AGREGAR RED</button>
                 <table className="Table">
                     <thead className="Table_thead">
                         <tr className="Table_tr">
                             <th className="Table_th"></th>
-                            <th className="Table_th">Imagen</th>
-                            <th className="Table_th">Descripcion</th>
-                            <th className="Table_th">Precio</th>
-                            <th className="Table_th">Link</th>
+                            <th className="Table_th">Icono</th>
+                            <th className="Table_th">Nombre</th>
+                            <th className="Table_th">URL</th>
                             <th className="Table_th"></th>
                             <th className="Table_th"></th>
                         </tr>
                     </thead>
                     <tbody className="Table_tbody">
-                        {productsData.map((e, index) =>
+                        {networksData.map((e, index) =>
                             <Row
-                                product={e}
+                                network={e}
                                 key={index}
                                 setModalData={setModalData}
                             />)}
@@ -64,39 +63,38 @@ function ProductPage() {
                 </table>
             </div>
             <Modal
-                open={modalData.description}
+                open={modalData.name}
                 onClose={() => setModalData({})}
             >
-                <ModalContent product={modalData} />
+                <ModalContent network={modalData} />
             </Modal>
         </div>
     )
 }
 
-function Row({ product, setModalData }) {
+function Row({ network, setModalData }) {
     let history = useHistory();
     return (
         <tr className="Table_tr">
             <td className="Table_td">
                 <button
                     className="Table__button"
-                    onClick={() => setModalData(product)}
+                    onClick={() => setModalData(network)}
                 >
                     VER
                 </button>
             </td>
             <td className="Table_td">
-                <img className="Table__image" src={product.imageURL} alt="" />
+                <img className="Table__image" src={network.iconURL} alt="" />
             </td>
-            <td className="Table_td">{product.description}</td>
-            <td className="Table_td">{product.price}</td>
-            <td className="Table_td">{product.shopURL}</td>
+            <td className="Table_td">{network.name}</td>
+            <td className="Table_td">{network.pageURL}</td>
             <td className="Table_td">
                 <button
                     className="Table__button blue_background"
                     onClick={() => history.push({
-                        pathname: pathnames.product_edit,
-                        state: product
+                        pathname: pathnames.network_edit,
+                        state: network
                     })}
                 >
                     Modificar
@@ -105,7 +103,7 @@ function Row({ product, setModalData }) {
             <td className="Table_td">
                 <button 
                     className="Table__button red_background"
-                    onClick={() => {ProductService.remove(product.id); history.go(0)}}
+                    onClick={() => {NetworkService.remove(network.id); history.go(0)}}
                 >
                     Eliminar
                 </button>
@@ -114,20 +112,18 @@ function Row({ product, setModalData }) {
     )
 }
 
-function ModalContent({ product }) {
+function ModalContent({ network }) {
     return (
         <div className="ModalItem">
-            <img className="ModalItem__img" src={product.imageURL} alt="" />
-            <span className="ModalItem__label">DESCRIPCIÓN:</span>
-            <span className="ModalItem__text">{product.description}</span>
-            <span className="ModalItem__label">PRECIO:</span>
-            <span className="ModalItem__text">{product.price}</span>
-            <span className="ModalItem__label">LINK:</span>
+            <img className="ModalItem__img--small" src={network.iconURL} alt="" />
+            <span className="ModalItem__label">NOMBRE:</span>
+            <span className="ModalItem__text">{network.name}</span>
+            <span className="ModalItem__label">SITIO:</span>
             <span className="ModalItem__text">
-                <a href={product.shopURL} target="_blank" rel="noreferrer">{product.shopURL} </a>
+                <a href={network.pageURL} target="_blank" rel="noreferrer">{network.pageURL} </a>
             </span>
         </div>
     )
 }
 
-export default ProductPage;
+export default NetworkPage;

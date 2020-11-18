@@ -7,6 +7,8 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 import Products from './pages/ProductsPage';
 import EditProduct from './pages/EditProduct';
+import Networks from './pages/NetworksPage';
+import EditNetwork from './pages/EditNetwork';
 
 function Routes() {
     return (
@@ -17,6 +19,8 @@ function Routes() {
             <Route exact path={pathNames.admin} component={Dashboard} />
             <Route exact path={pathNames.products} component={Products} />
             <Route exact path={pathNames.product_edit} component={EditProduct} />
+            <Route exact path={pathNames.networks} component={Networks} />
+            <Route exact path={pathNames.network_edit} component={EditNetwork} />
         </Switch>
     );
 }

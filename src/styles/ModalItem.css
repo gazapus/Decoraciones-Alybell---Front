@@ -18,6 +18,10 @@
     width: 80%;
 }
 
+.ModalItem__img--small {
+    width: 50%;
+}
+
 .ModalItem__label {
     font-size: 1.2em;
     font-family: Rajdhani;

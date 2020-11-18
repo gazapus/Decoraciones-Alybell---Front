@@ -3,11 +3,11 @@ import Logo from '../components/Logo';
 import LogoutButton from '../components/LogoutButton';
 import PageTitleBar from '../components/PageTitleBar';
 import { useState } from 'react';
-import ProductService from '../services/product.service';
+import NetworkService from '../services/network.service';
 import useLoggedUser from '../hooks/userLogged';
 import '../styles/EditPage.css';
-import ProductForm from '../components/ProductForm';
-import { useHistory} from 'react-router-dom';
+import NetworkForm from '../components/NetworkForm';
+import { useHistory } from 'react-router-dom';
 import pathnames from '../utils/pathnames';
 
 /** 
@@ -15,33 +15,32 @@ import pathnames from '../utils/pathnames';
  * @constructor
  * @prop {object} location - product to edit - default: empty object
  */
-function EditProduct({ location }) {
+function EditNetwork({ location }) {
     let userLogged = useLoggedUser();
     const [loading, setLoading] = useState(false);
     let history = useHistory();
     const [errorMessage, setErrorMessage] = useState("");
 
-    function save(product, id) {
+    function save(network, id) {
         setLoading(true);
         if (id) {
-            ProductService.update(id, product)
+            NetworkService.update(id, network)
                 .then(response => {
-                    history.push(pathnames.products)
+                    history.push(pathnames.networks)
                 }).catch(err => {
                     setErrorMessage(err);
                     setLoading(false);
                 })
         } else {
-            ProductService.create(product)
+            NetworkService.create(network)
                 .then(response => {
-                    history.push(pathnames.products)
+                    history.push(pathnames.networks)
                 }).catch(err => {
                     setErrorMessage(err);
                     setLoading(false);
                 })
         }
     }
-
 
     if (!userLogged) return <div></div>
 
@@ -51,11 +50,11 @@ function EditProduct({ location }) {
                 leftItems={<Logo />}
                 rightItems={<LogoutButton />}
             />
-            <PageTitleBar route={pathnames.products}>PRODUCTO</PageTitleBar>
+            <PageTitleBar route={pathnames.networks}>RED</PageTitleBar>
             {(loading) ? <span>Cargando</span> : ""}
             <div className="EditPage__form">
-                <ProductForm
-                    product={location.state || {}}
+                <NetworkForm
+                    network={location.state || {}}
                     handleSubmit={save}
                     errorSubmit={errorMessage}
                 />
@@ -64,4 +63,4 @@ function EditProduct({ location }) {
     )
 }
 
-export default EditProduct;
+export default EditNetwork;

@@ -8,7 +8,7 @@
     src: url(../fonts/Rajdhani-Regular.ttf);
 }
 
-.ProductForm {
+.ItemForm {
     width: 40%;
     background-color: grey;
     display: flex;
@@ -20,12 +20,12 @@
     border-style: solid;
 }
 
-.ProductForm__errorMessage {
+.ItemForm__errorMessage {
     color: red;
     text-align: center;
 }
 
-.ProductForm__image {
+.ItemForm__image {
     width: 15vmax;
     height: 15vmax;
     background-size: cover;
@@ -33,13 +33,13 @@
     background-color: grey;
 }
 
-.ProductForm__label {
+.ItemForm__label {
     font-family: Rajdhani-r;
     font-size: 1.1em;
     margin-top: 1em;
 }
 
-.ProductForm__input {
+.ItemForm__input {
     font-family: Rajdhani-r;
     font-size: 1.1em;
     width: 90%;
@@ -47,33 +47,33 @@
     text-indent: 0.5em;
 }
 
-.ProductForm__input::placeholder {
+.ItemForm__input::placeholder {
     color: rgb(192, 192, 192);
 }
 
-.ProductForm__textArea {
+.ItemForm__textArea {
     height: 5em;
     resize: none;
 }
 
-.ProductForm__buttonContainer {
+.ItemForm__buttonContainer {
     margin: 2vmax;
 }
 
 @media(max-width: 1200px) {
-    .ProductForm {
+    .ItemForm {
         width: 50%;
     }
 }
 
 @media(max-width: 1000px) {
-    .ProductForm {
+    .ItemForm {
         width: 60%;
     }
 }
 
 @media(max-width: 800px) {
-    .ProductForm {
+    .ItemForm {
         width: 90%;
     }
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import '../styles/ProductForm.css';
+import '../styles/ItemForm.css';
 import Button from './Button';
 import validator from 'validator';
 
@@ -23,7 +23,7 @@ function ProductForm({ backgroundColor = "#000", textColor = "#fff", handleSubmi
     }, [errorSubmit])
 
     function isValidForm() {
-        return (validator.isURL(imageURL) && validator.isURL(shopURL))
+        return (validator.isURL(imageURL) && validator.isURL(shopURL) && !validator.isEmpty(description))
     }
 
     function handleSubmitForm(e) {
@@ -42,52 +42,52 @@ function ProductForm({ backgroundColor = "#000", textColor = "#fff", handleSubmi
 
     return (
         <form
-            className="ProductForm"
+            className="ItemForm"
             style={{ backgroundColor: backgroundColor, color: textColor }}
         >
-            <span className="ProductForm__errorMessage">{errorMessage}</span>
-            <div className="ProductForm__image" style={{ backgroundImage: `url(${imageURL})` }}></div>
-            <label htmlFor="imageURL" className="ProductForm__label">URL de Imagen:</label>
+            <span className="ItemForm__errorMessage">{errorMessage}</span>
+            <div className="ItemForm__image" style={{ backgroundImage: `url(${imageURL})` }}></div>
+            <label htmlFor="imageURL" className="ItemForm__label">URL de Imagen:</label>
             <input
                 type="url"
                 id="imageURL"
-                className="ProductForm__input"
+                className="ItemForm__input"
                 value={imageURL}
                 onInput={(e) => setImageURL(e.target.value)}
                 minLength={1}
                 placeholder="https://www.images.com/image.png"
                 required={true}
             />
-            <label htmlFor="description" className="ProductForm__label">Descripción:</label>
+            <label htmlFor="description" className="ItemForm__label">Descripción:</label>
             <textarea
                 id="description"
-                className="ProductForm__input ProductForm__textArea"
+                className="ItemForm__input ItemForm__textArea"
                 value={description}
                 onInput={(e) => setDescription(e.target.value)}
                 placeholder="Hermoso decorado de guirnaldas de temporada, varios colores"
                 minLength={1}
             />
-            <label htmlFor="price" className="ProductForm__label">Precio:</label>
+            <label htmlFor="price" className="ItemForm__label">Precio:</label>
             <input
                 type="numbre"
                 id="price"
-                className="ProductForm__input"
+                className="ItemForm__input"
                 value={price}
                 onInput={(e) => setPrice(e.target.value)}
                 minLength={1}
             />
-            <label htmlFor="shopURL" className="ProductForm__label">URL de la publicación:</label>
+            <label htmlFor="shopURL" className="ItemForm__label">URL de la publicación:</label>
             <input
                 type="url"
                 id="shopURL"
-                className="ProductForm__input"
+                className="ItemForm__input"
                 value={shopURL}
                 onInput={(e) => setShopURL(e.target.value)}
                 minLength={1}
                 placeholder="https://www.shop.com/publicacion1"
                 required={true}
             />
-            <div className="ProductForm__buttonContainer">
+            <div className="ItemForm__buttonContainer">
                 <Button
                     text="GUARDAR"
                     size="S"

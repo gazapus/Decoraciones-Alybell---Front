@@ -41,7 +41,7 @@ function Dashboard() {
                             <CardButton
                                 backgroundImage="https://www.marketingregistrado.com/img/noticias/redes-sociales-google.jpg"
                                 text="REDES"
-                                handleClick={() => { }}
+                                handleClick={() => { history.push(pathNames.networks)}}
                             />
                             <CardButton
                                 backgroundImage="https://fotografias.lasexta.com/clipping/cmsimages02/2019/05/23/7DAFE6C6-6A2B-4C13-BAA0-A99376C5897A/58.jpg"
