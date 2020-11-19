@@ -56,6 +56,10 @@
     resize: none;
 }
 
+.ItemForm__checkbox {
+    transform: scale(1.4);
+}
+
 .ItemForm__buttonContainer {
     margin: 2vmax;
 }

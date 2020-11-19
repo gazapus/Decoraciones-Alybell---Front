@@ -1,12 +1,13 @@
 import http from "../utils/http-common";
+import authHeader from "./auth-header";
 
-function register(username, email, password, roles) {
+function register(username, email, password, isAdmin) {
     return http.post("/auth/signup", {
         username,
         email,
         password,
-        roles
-    });
+        isAdmin
+    },  { headers: authHeader() });
 };
 
 function login(username, password) {

@@ -8,4 +8,6 @@ module.exports = {
     network_edit: '/dashboard/networks/edit',
     news: '/dashboard/news',
     news_edit: '/dashboard/news/edit',
+    user: '/dashboard/user',
+    user_edit: '/dashboard/user/edit'
 }

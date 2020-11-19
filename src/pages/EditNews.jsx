@@ -36,7 +36,7 @@ function EditNews({ location }) {
                 .then(response => {
                     history.push(pathnames.news)
                 }).catch(err => {
-                    setErrorMessage(err);
+                    setErrorMessage(err.response.data.message);
                     setLoading(false);
                 })
         }

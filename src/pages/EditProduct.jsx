@@ -36,7 +36,7 @@ function EditProduct({ location }) {
                 .then(response => {
                     history.push(pathnames.products)
                 }).catch(err => {
-                    setErrorMessage(err);
+                    setErrorMessage(err.response.data.message);
                     setLoading(false);
                 })
         }

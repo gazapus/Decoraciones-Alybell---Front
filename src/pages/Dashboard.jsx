@@ -50,8 +50,8 @@ function Dashboard() {
                             />
                             <CardButton
                                 backgroundImage="https://www.idibuild.es/wp-content/uploads/2017/02/seguridad-control-accesos-idibuild2.jpg"
-                                text="OTROS"
-                                handleClick={() => { }}
+                                text="USUARIOS"
+                                handleClick={() => { history.push(pathNames.user)}}
                             />
                         </div>
                     </div>

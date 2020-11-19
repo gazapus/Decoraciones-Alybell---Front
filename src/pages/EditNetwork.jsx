@@ -36,7 +36,7 @@ function EditNetwork({ location }) {
                 .then(response => {
                     history.push(pathnames.networks)
                 }).catch(err => {
-                    setErrorMessage(err);
+                    setErrorMessage(err.response.data.message);
                     setLoading(false);
                 })
         }
