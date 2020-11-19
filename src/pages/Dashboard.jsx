@@ -46,7 +46,7 @@ function Dashboard() {
                             <CardButton
                                 backgroundImage="https://fotografias.lasexta.com/clipping/cmsimages02/2019/05/23/7DAFE6C6-6A2B-4C13-BAA0-A99376C5897A/58.jpg"
                                 text="NOTICIAS"
-                                handleClick={() => { }}
+                                handleClick={() => { history.push(pathNames.news)}}
                             />
                             <CardButton
                                 backgroundImage="https://www.idibuild.es/wp-content/uploads/2017/02/seguridad-control-accesos-idibuild2.jpg"

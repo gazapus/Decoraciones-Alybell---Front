@@ -6,4 +6,6 @@ module.exports = {
     product_edit: '/dashboard/products/edit',
     networks: '/dashboard/networks',
     network_edit: '/dashboard/networks/edit',
+    news: '/dashboard/news',
+    news_edit: '/dashboard/news/edit',
 }

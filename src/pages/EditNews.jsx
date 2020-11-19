@@ -3,38 +3,38 @@ import Logo from '../components/Logo';
 import LogoutButton from '../components/LogoutButton';
 import PageTitleBar from '../components/PageTitleBar';
 import { useState } from 'react';
-import NetworkService from '../services/network.service';
+import NewsService from '../services/news.service';
 import useLoggedUser from '../hooks/userLogged';
 import '../styles/EditPage.css';
-import NetworkForm from '../components/NetworkForm';
+import NewsForm from '../components/NewsForm';
 import { useHistory } from 'react-router-dom';
 import pathnames from '../utils/pathnames';
 
 /** 
- * Edit an existing network or add a new network
+ * Edit an existing news or add a new news
  * @constructor
- * @prop {object} location - network to edit - default: empty object
+ * @prop {object} location - news to edit - default: empty object
  */
-function EditNetwork({ location }) {
+function EditNews({ location }) {
     let userLogged = useLoggedUser();
     const [loading, setLoading] = useState(false);
     let history = useHistory();
     const [errorMessage, setErrorMessage] = useState("");
 
-    function save(network, id) {
+    function save(news, id) {
         setLoading(true);
         if (id) {
-            NetworkService.update(id, network)
+            NewsService.update(id, news)
                 .then(response => {
-                    history.push(pathnames.networks)
+                    history.push(pathnames.news)
                 }).catch(err => {
                     setErrorMessage(err);
                     setLoading(false);
                 })
         } else {
-            NetworkService.create(network)
+            NewsService.create(news)
                 .then(response => {
-                    history.push(pathnames.networks)
+                    history.push(pathnames.news)
                 }).catch(err => {
                     setErrorMessage(err);
                     setLoading(false);
@@ -50,11 +50,11 @@ function EditNetwork({ location }) {
                 leftItems={<Logo />}
                 rightItems={<LogoutButton />}
             />
-            <PageTitleBar route={pathnames.networks}>RED</PageTitleBar>
+            <PageTitleBar route={pathnames.news}>NOVEDAD</PageTitleBar>
             {(loading) ? <span>PROCESANDO</span> : ""}
             <div className="EditPage__form">
-                <NetworkForm
-                    network={location.state || {}}
+                <NewsForm
+                    news={location.state || {}}
                     handleSubmit={save}
                     errorSubmit={errorMessage}
                 />
@@ -63,4 +63,4 @@ function EditNetwork({ location }) {
     )
 }
 
-export default EditNetwork;
+export default EditNews;
