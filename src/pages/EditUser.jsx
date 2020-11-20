@@ -50,7 +50,7 @@ function EditUser() {
                 leftItems={<Logo />}
                 rightItems={<LogoutButton />}
             />
-            <PageTitleBar route={pathnames.news}>USUARIO</PageTitleBar>
+            <PageTitleBar route={pathnames.user}>USUARIO</PageTitleBar>
             {(loading) ? <span>PROCESANDO</span> : ""}
             <div className="EditPage__form">
                 <UserForm
