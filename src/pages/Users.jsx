@@ -22,7 +22,7 @@ function UserPage() {
                 alert(err.response.data.message);
                 if(err.response.status === 403) history.push(pathnames.admin)
             })
-    }, [])
+    }, [history])
 
     return (
         <div className="itemPage">

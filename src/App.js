@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import ShopSection from './components/ShopSection';
-import MainBanner from './pages/main/Banner';
+import MainBanner from './pages/main/MainBanner';
 import MainCards from './pages/main/MainCards';
 import MainFooter from './pages/main/MainFooter';
 import MainAbout from './pages/main/MainAbout';
