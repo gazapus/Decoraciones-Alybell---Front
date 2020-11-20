@@ -2,7 +2,7 @@ import '../styles/Icon.css';
 /** 
  * Represents an icon with an url to access on click
  * @constructor
- * @prop {image} image - Image source of the icon
+ * @prop {String} image - Image url of the icon
  * @prop {String} url - Url to access on click
  * @prop {String} size - Size of the icon: XS|S|M|L|XL
  */

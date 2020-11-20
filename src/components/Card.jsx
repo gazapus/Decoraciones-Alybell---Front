@@ -46,7 +46,7 @@ function Card({
                     className="CardDescription__price" 
                     style={{ backgroundColor: priceBGColor, color: priceTextColor}}
                 >
-                    {(price !== 0) ? '$' + price : '.'}
+                    {(price) ? '$' + price : 'Consultar'}
                 </p>
             </div>
         </div>

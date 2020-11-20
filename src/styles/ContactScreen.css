@@ -66,8 +66,21 @@
     height: 15%;
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
     padding-right: 5%;
     box-sizing: border-box;
+}
+
+.Form__networks a {
+    font-family: Abel;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: rgb(255, 59, 59);
+    text-shadow: 0 0 3px black;
+}
+
+.Form__networks a:hover {
+    text-decoration: underline;
 }
 
 .Map {

@@ -48,7 +48,7 @@ function NewsForm({ backgroundColor = "#000", textColor = "#fff", handleSubmit, 
                 value={newsText}
                 onInput={(e) => setNewsText(e.target.value)}
                 placeholder="Luces y Guirnaldas de excelente calidad, tematicas de flores y otra cosa"
-                maxLength={60}
+                maxLength={100}
             />
             <div className="ItemForm__buttonContainer">
                 <Button

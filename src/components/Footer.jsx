@@ -1,6 +1,5 @@
 import '../styles/Footer.css';
 
-
 /** 
  * Represents footer
  * @constructor

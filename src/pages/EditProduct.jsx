@@ -42,7 +42,6 @@ function EditProduct({ location }) {
         }
     }
 
-
     if (!userLogged) return <div></div>
 
     return (
