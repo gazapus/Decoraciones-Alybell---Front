@@ -65,7 +65,11 @@ function Row({ user }) {
             <td className="Table_td">
                 <button
                     className="Table__button red_background"
-                    onClick={() => { UserService.remove(user.id); history.go(0) }}
+                    onClick={() => { 
+                        UserService.remove(user.id)
+                            .then(res =>  history.go(0) )
+                            .catch(err => alert("Error, no se puede eliminar este usuario")) 
+                        }}
                 >
                     Eliminar
                 </button>

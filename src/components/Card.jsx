@@ -36,12 +36,12 @@ function Card({
             ></div>
             <div
                 className={(descriptionVisible) ? 'Card__description Card__description-show' : 'Card__description'}
-                onClick={() => window.open({ redirectURL })}
+                onClick={() => window.open(redirectURL)}
             >
                 <p className="CardDescription__title">Decoraciones Alybell</p>
                 <hr className="CardDescription__line" />
                 <p className="CardDescription__text">{description}</p>
-                <a href={redirectURL} target="_blank" rel="noopener noreferrer" className="CardDescription__link">VER</a>
+                <span className="CardDescription__link">VER</span>
                 <p 
                     className="CardDescription__price" 
                     style={{ backgroundColor: priceBGColor, color: priceTextColor}}
