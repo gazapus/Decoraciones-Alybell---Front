@@ -15,7 +15,7 @@ function App() {
     color3: '#ECD078',
     color4: '#D95B43',
     light: 'white',
-    dark: '#',
+    dark: 'black',
     semidark: '#171717',
     semilight: '#ECD078'
   }
