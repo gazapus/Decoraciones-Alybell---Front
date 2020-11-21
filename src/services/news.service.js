@@ -25,7 +25,7 @@ function removeAll() {
     return http.delete(`/news/delete`, { headers: authHeader() });
 };
 
-export default {
+let methods = {
     getAll,
     get,
     create,
@@ -33,3 +33,5 @@ export default {
     remove,
     removeAll
 };
+
+export default methods;

@@ -29,9 +29,11 @@ const getCurrentUser = () => {
     return JSON.parse(localStorage.getItem("user"));
 };
 
-export default {
+let methods = {
     register,
     login,
     logout,
     getCurrentUser,
-};
+}
+
+export default methods;

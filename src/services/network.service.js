@@ -25,11 +25,13 @@ function removeAll() {
     return http.delete(`/network/delete`, { headers: authHeader() });
 };
 
-export default {
+let methods = {
     getAll,
     get,
     create,
     update,
     remove,
     removeAll
-};
+}
+
+export default methods;

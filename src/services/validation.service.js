@@ -9,7 +9,9 @@ function isAdmin() {
     return http.get("/auth/check/admin", { headers: authHeader() });
 };
 
-export default {
+let methods = {
     isAdminOrMod,
     isAdmin
-};
+}
+
+export default methods;
