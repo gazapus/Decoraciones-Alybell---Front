@@ -15,7 +15,7 @@
     width: 75%;
     height: 85%;
     border-style: solid;
-    border-radius: 2vw;
+    border-radius: 0 2vw 2vw 0;
     display: flex;
     overflow: hidden;
 }
@@ -75,8 +75,6 @@
     font-family: Abel;
     text-decoration: none;
     font-size: 1.2em;
-    color: rgb(255, 59, 59);
-    text-shadow: 0 0 3px black;
 }
 
 .Form__networks a:hover {

@@ -7,7 +7,6 @@ import { useEffect, useState } from 'react';
 import { useHistory } from "react-router-dom";
 import pathNames from '../utils/pathnames';
 import CardButton from '../components/CardButton';
-import Footer from '../components/Footer';
 
 function Dashboard() {
     const [userAuthorizedLoaded, setUserAuthorizedLoaded] = useState(false);

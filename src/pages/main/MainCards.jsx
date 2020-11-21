@@ -10,7 +10,7 @@ import ProductService from '../../services/product.service';
  * Represents the card container
  ** This adjust the large and distribution of the cards on the parent element
  */
-function CardsPage() {
+function CardsPage({colors}) {
     const [width, height] = useWindowSize();
     const [largeCard, setLargeCard] = useState(1);
     const [cardsQuantity, setCardsQuantity] = useState(1);
@@ -56,6 +56,8 @@ function CardsPage() {
                         redirectURL={data.shopURL}
                         large={largeCard}
                         key={index}
+                        priceBGColor={colors.color1}
+                        priceTextColor={colors.light}
                     /> :
                     ''
             )}
@@ -64,7 +66,8 @@ function CardsPage() {
                     <Button
                         text="VER MAS"
                         handleClick={() => setSeeMore(true)}
-                        color="red"
+                        backgroundColor={colors.color4}
+                        textColor={colors.light}
                     />
                 </div>
                 : ''

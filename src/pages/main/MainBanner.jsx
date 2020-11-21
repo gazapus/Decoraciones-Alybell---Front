@@ -10,7 +10,7 @@ import NetworkService from '../../services/network.service';
 import NewsService from '../../services/news.service';
 import ScrollIntoView from 'react-scroll-into-view';
 
-function MainBanner({ keyboardOpen }) {
+function MainBanner({ keyboardOpen, colors }) {
     const [imageSize, setImageSize] = useState("M");
     const [width] = useWindowSize();
     const [networks, setNetworksIcons] = useState([]);
@@ -45,7 +45,7 @@ function MainBanner({ keyboardOpen }) {
 
     return (
         <FullScreenPage
-            backgroundImageSrc='https://i.ibb.co/d0jRB7w/Vintage-color-filter-cosmos-flower-field.jpg'
+            backgroundImageSrc='https://i.ibb.co/28N1qrz/aaaa.jpg'
             keyboardOpen={keyboardOpen}
         >
             <NavBar
@@ -58,20 +58,28 @@ function MainBanner({ keyboardOpen }) {
                         key={e.name}
                     />)
                 }
+                backgroundColor={colors.color1}
             />
             <BannerText
                 mainText="LUCES Y DECORACIONES PARA TU HOGAR Y EVENTO"
                 subText={news}
+                mainTextColor={colors.color2}
+                secondaryTextColor={colors.color3}
+                secondaryTextBGColor={colors.color2}
             >
                 <ScrollIntoView selector="#products">
                     <Button
                         text="PRODUCTOS"
+                        backgroundColor={colors.color4}
+                        textColor={colors.light}
                     />
                 </ScrollIntoView>
                 <span style={{ marginLeft: 1 + 'vmax' }}></span>
                 <ScrollIntoView selector="#about">
                     <Button
                         text="NOSOTROS"
+                        backgroundColor={colors.color4}
+                        textColor={colors.light}
                     />
                 </ScrollIntoView>
             </BannerText>

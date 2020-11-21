@@ -3,7 +3,7 @@ import Icon from '../../components/Icon';
 import { useEffect, useState } from 'react';
 import NetworkService from '../../services/network.service';
 
-function MainFooter() {
+function MainFooter({colors}) {
     const [networks, setNetworks] = useState([]);
 
     useEffect(() => {
@@ -12,17 +12,19 @@ function MainFooter() {
                 setNetworks(response.data);
             })
             .catch(err => {
-                console.log(err.response.data.message);
+                console.log(err);
             })
     })
 
     return (
         <Footer
+            backgroundColor = {colors.semidark}
+            textColor = {colors.semilight}
             networksIcons={networks.map(net =>
                 <Icon
                     image={net.iconURL}
                     url={net.pageURL}
-                    size={"XS"}
+                    size={"S"}
                     key={net.name}
                 />)
             }

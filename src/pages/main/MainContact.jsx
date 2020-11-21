@@ -15,7 +15,10 @@ function MainContact({
     setKeyboardOpen,
     borderColor = "#000",
     backgroundColor = "#00000021",
-    footerColor = "#000000A8"
+    footerColor = "#000000A8",
+    buttonColor = "#000",
+    buttonText = "#fff",
+    footerText = "#fff"
 }) {
     return (
         <FullScreenPage
@@ -33,10 +36,14 @@ function MainContact({
                             <ContactForm
                                 onOpenKeyboard={() => setKeyboardOpen(true)}
                                 onCloseKeyoboard={() => setKeyboardOpen(false)}
+                                buttonBgColor = {buttonColor}
+                                buttonTextColor = {buttonText}
                             />
                         </div>
                         <div className="Form__networks" style={{ backgroundColor: footerColor }}>
-                            <a href="mailto:elcorreoquequieres@correo.com?Subject=Contacto%20Decoraciones%20Alybell">
+                            <a href="mailto:elcorreoquequieres@correo.com?Subject=Contacto%20Decoraciones%20Alybell"
+                                style={{color: footerText}}
+                            >
                                 o escribenos un mail aquí
                             </a>
                         </div>
