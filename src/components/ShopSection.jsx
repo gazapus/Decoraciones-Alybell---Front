@@ -1,5 +1,7 @@
 import '../styles/ShopSection.css';
 import Button from './Button';
+import { useEffect, useState } from 'react';
+import NetworkService from '../services/network.service';
 
 /** 
  * Represents a container that covers the height and width of the screen
@@ -10,12 +12,22 @@ import Button from './Button';
  * @prop {string} buttonTextColor - text button Color. Default: #000
  */
 function ShopSection({
-    url="#", 
     backgroundColor="#000", 
     textColor="#fff",
     buttonBgColor="#fff",
     buttonTextColor="#000"
 }) {
+    const [link, setLink] = useState("#");
+
+    useEffect(() => {
+        NetworkService.getAll()
+            .then(res => {
+                let mercadolibre = res.data.find(e => e.name === "mercadolibre");
+                if(mercadolibre) setLink(mercadolibre.pageURL)
+            })
+            .catch(err => console.log(err));
+    }, [])
+
     return (
         <div className="ShopSection">
             <div className="Shop" style={{backgroundColor: backgroundColor}}>
@@ -26,7 +38,7 @@ function ShopSection({
                 <div className="Shop__buttonContainer">
                     <Button
                         text="CATALOGO"
-                        handleClick={() => window.open(url, '_blank') }
+                        handleClick={() => window.open(link, '_blank') }
                         backgroundColor={buttonBgColor}
                         textColor={buttonTextColor}
                     />

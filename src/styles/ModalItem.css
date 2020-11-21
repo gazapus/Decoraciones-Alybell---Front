@@ -26,9 +26,12 @@
     font-size: 1.2em;
     font-family: Rajdhani;
     margin-top: 1vmax;
+    color: white;
 }
 
 .ModalItem__text {
     font-size: 1.1em;
     font-family: Rajdhani-R;
+    color: white;
+
 }
