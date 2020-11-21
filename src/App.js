@@ -44,7 +44,7 @@ function App() {
         footerColor = {colors.color1}
         buttonColor = {colors.color4}
         buttonText = {colors.light}
-        footerText = {colors.light}
+        footerText = {colors.color3}
       />
       <MainFooter colors={colors}/>
     </div>
