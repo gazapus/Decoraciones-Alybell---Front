@@ -15,7 +15,6 @@
     width: 75%;
     height: 85%;
     border-style: solid;
-    border-radius: 0 2vw 2vw 0;
     display: flex;
     overflow: hidden;
 }

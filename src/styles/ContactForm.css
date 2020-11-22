@@ -15,13 +15,12 @@
     width: 75%;
     height: 3em;
     margin: 1em 0 1em 0;
-    border-radius: 8pt;
-    border-style: solid;
+    border-style: none none solid none;
     box-sizing: border-box;
     border-color:  rgb(41, 41, 41);
     font-size: 1em;
     font-family: Abel;
-    background-color: rgba(255, 255, 255, 0.596);
+    background-color: rgba(185, 185, 185, 0.596);
     text-indent: 1em;
 }
 
@@ -29,27 +28,27 @@
     width: 75%;
     min-height: 3em;
     margin: 1em 0 1em 0;
-    border-radius: 8pt;
     border-color: rgb(41, 41, 41);
     border-width: 2px;
-    border-style: solid;
+    border-style: none none solid none;
     box-sizing: border-box;
     font-size: 1em;
     flex: 1;
     font-family: Abel;
-    background-color: rgba(255, 255, 255, 0.384);
+    background-color: rgba(185, 185, 185, 0.596);
     text-indent: 1em;
     resize: none;
 }
 
 .ContactForm__input::placeholder, .ContactForm__message::placeholder {
-    color:rgb(141, 141, 141)
+    color:rgb(79, 121, 175);
+    font-size: 1.1em;
 }
 
 .ContactForm__input:focus, 
 .ContactForm__message:focus,
 .ContactForm__input:active {
-    background-color: rgba(255, 255, 255, 0.877);
+    background-color: rgba(221, 230, 201, 0.877);
     outline: none;
 }
 
@@ -63,6 +62,7 @@
 
 .ContactForm__input-wrong {
     border-color:  rgb(219, 20, 20);
+    background-color: rgba(255, 204, 204, 0.664);
 }
 
 .ContactForm__messageSend {
