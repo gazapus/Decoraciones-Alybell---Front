@@ -22,31 +22,31 @@ function App() {
 
   return (
     <div className="App">
-      <MainBanner keyboardOpen={keyboardOpen} colors={colors}/>
-      <MainCards colors={colors}/>
-      <ShopSection 
+      <MainBanner keyboardOpen={keyboardOpen} colors={colors} />
+      <MainCards colors={colors} />
+      <ShopSection
         backgroundColor={colors.color1}
         textColor={colors.color3}
         buttonBgColor={colors.color4}
         buttonTextColor={colors.light}
       />
-      <MainAbout 
+      <MainAbout
         keyboardOpen={keyboardOpen}
-        backgroundColor = {colors.color2}
-        textColor = {colors.light}
-        highlightedColor = {colors.color3}
+        backgroundColor={colors.color2}
+        textColor={colors.light}
+        highlightedColor={colors.color3}
       />
-      <MainContact 
-        keyboardOpen={keyboardOpen} 
+      <MainContact
+        keyboardOpen={keyboardOpen}
         setKeyboardOpen={setKeyboardOpen}
-        borderColor = {colors.color1}
-        backgroundColor = {'#FFFFFFAA'} 
-        footerColor = {colors.color1}
-        buttonColor = {colors.color4}
-        buttonText = {colors.light}
-        footerText = {colors.color3}
+        borderColor={colors.color1}
+        backgroundColor={'#FFFFFFAA'}
+        footerColor={colors.color1}
+        buttonColor={colors.color4}
+        buttonText={colors.light}
+        footerText={colors.color3}
       />
-      <MainFooter colors={colors}/>
+      <MainFooter colors={colors} />
     </div>
   );
 }

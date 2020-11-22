@@ -1,5 +1,8 @@
 import '../styles/ContactForm.css';
 import Button from './Button';
+import { useRef } from 'react';
+import Validator from 'validator';
+import MailService from '../services/mail.service';
 
 /** 
  * Represents contact form component
@@ -10,33 +13,78 @@ import Button from './Button';
  * @prop {string} buttonTextColor - text color button
  */
 function ContactForm({onOpenKeyboard, onCloseKeyoboard, buttonBgColor="#000", buttonTextColor="#fff" }) {
+    const nameInput = useRef("");
+    const emailInput = useRef("");
+    const messageInput = useRef("");
+
+
+    function validateInputs() {
+        let validInputs = true;
+        if(Validator.isEmpty(nameInput.current.value)){
+            nameInput.current.classList.add('ContactForm__input-wrong');
+            validInputs = false;
+        }
+        if(!Validator.isEmail(emailInput.current.value)){
+            emailInput.current.classList.add('ContactForm__input-wrong');
+            validInputs = false;
+        }
+        if(Validator.isEmpty(messageInput.current.value)){
+            messageInput.current.classList.add('ContactForm__input-wrong');
+            validInputs = false;
+        }
+        return validInputs;
+    }
+
+    function handleSumbit(e) {
+        e.preventDefault();
+        if(validateInputs()){
+            MailService.sendMail(nameInput.current.value, emailInput.current.value, messageInput.current.value)
+                .then(response => {
+                    console.log("Email enviado")
+                })
+                .catch(err => console.error(err));
+        }
+    }
+
     return (
         <form className="ContactForm">
             <input 
-                type="text" 
+                type="text"
+                ref={nameInput} 
                 placeholder="nombre" 
                 name="name" 
                 className="ContactForm__input" 
                 onFocus={onOpenKeyboard}
                 onBlur={onCloseKeyoboard}
+                maxLength={50}
+                minLength={1}
+                onChange={() => nameInput.current.classList.remove('ContactForm__input-wrong')}
             />
             <input 
-                type="email" 
+                type="email"
+                ref={emailInput} 
                 placeholder="email" 
                 className="ContactForm__input"
                 onFocus={onOpenKeyboard}
                 onBlur={onCloseKeyoboard}
+                maxLength={50}
+                minLength={1}
+                onChange={() => emailInput.current.classList.remove('ContactForm__input-wrong')}
             />
             <textarea 
-                placeholder="mensaje" 
+                placeholder="mensaje"
+                ref={messageInput} 
                 className="ContactForm__message"
                 onFocus={onOpenKeyboard}
                 onBlur={onCloseKeyoboard}
+                maxLength={500}
+                minLength={1}
+                onChange={() => messageInput.current.classList.remove('ContactForm__input-wrong')}
             />
             <div className="ContactForm__buttonContainer">
                 <Button
                     text="ENVIAR"
-                    handleClick={() => console.log("Ep")}
+                    handleClick={handleSumbit}
                     backgroundColor={buttonBgColor}
                     textColor={buttonTextColor}
                     size="S"
