@@ -9,7 +9,7 @@ import '../styles/NavBar.css';
  */
 function NavBar({ leftItems, rightItems, backgroundColor="#000" }) {
     return (
-        <div className="NavBar" style={{backgroundColor: backgroundColor}}>
+        <div className="NavBar" style={{backgroundColor: backgroundColor + 'CA'}}>
             <div className="NavBar__leftItems">
                 {leftItems}
             </div>

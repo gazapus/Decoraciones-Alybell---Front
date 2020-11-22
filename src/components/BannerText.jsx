@@ -53,7 +53,7 @@ function BannerText({
     return (
         <div className="BannerText">
             <h2 className="BannerText__main" style={{color: mainTextColor}}>{mainText}</h2>
-            <div className="SubText" style={{backgroundColor: secondaryTextBGColor}}> 
+            <div className="SubText" style={{backgroundColor: secondaryTextBGColor + 'EA'}}> 
                 <p
                     className={`SubText__text ${textClass}`}
                     onTransitionEnd={runAnimation}
