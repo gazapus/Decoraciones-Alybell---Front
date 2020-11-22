@@ -1,7 +1,6 @@
 #TAREAS A REALIZAR
 
 [HIGH]
- - Crear Logo
  - Cargar Datos de ejemplo
  - Crear administrador real
  - Definir textos 
