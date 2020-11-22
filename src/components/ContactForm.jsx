@@ -14,11 +14,12 @@ import MailService from '../services/mail.service';
  */
 function ContactForm({ onOpenKeyboard, onCloseKeyoboard, buttonBgColor = "#000", buttonTextColor = "#fff" }) {
     const [sendingForm, setSendingForm] = useState(false);
+    const [formMessage, setFormMessage] = useState("");
 
     const nameInput = useRef("");
     const emailInput = useRef("");
     const messageInput = useRef("");
-
+    const messageForm = useRef("");
 
     function validateInputs() {
         let validInputs = true;
@@ -39,8 +40,9 @@ function ContactForm({ onOpenKeyboard, onCloseKeyoboard, buttonBgColor = "#000",
 
     function handleSumbit(e) {
         e.preventDefault();
-        setSendingForm(true);
         if (validateInputs()) {
+            setSendingForm(true);
+            setFormMessage("Enviando...");
             MailService.sendMail({
                 name: nameInput.current.value,
                 email: emailInput.current.value,
@@ -49,9 +51,20 @@ function ContactForm({ onOpenKeyboard, onCloseKeyoboard, buttonBgColor = "#000",
                 .then(res => {
                     console.log("OK");
                     clearForm();
+                    setFormMessage("Enviado exitosamente");
+                    messageForm.current.classList.add("ContactForm__messageSend-success");
                 })
-                .catch(err => console.log(err))
-                .finally(() => setSendingForm(false))
+                .catch(err => {
+                    console.log(err)
+                    messageForm.current.classList.add("ContactForm__messageSend-failed");
+                    setFormMessage("Error, no se pudo enviar");
+                })
+                .finally(() => {
+                    setTimeout(() => {
+                        messageForm.current.className = "ContactForm__messageSend";
+                        setSendingForm(false)
+                    }, 3500);
+                })
         }
     }
 
@@ -97,8 +110,8 @@ function ContactForm({ onOpenKeyboard, onCloseKeyoboard, buttonBgColor = "#000",
                 onChange={() => messageInput.current.classList.remove('ContactForm__input-wrong')}
             />
             <div className="ContactForm__buttonContainer">
-                {(sendingForm ? 
-                    <p>ENVIANDO...</p> 
+                {(sendingForm ?
+                    <p ref={messageForm} className="ContactForm__messageSend">{formMessage}</p>
                     :
                     <Button
                         text="ENVIAR"

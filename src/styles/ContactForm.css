@@ -65,6 +65,18 @@
     border-color:  rgb(219, 20, 20);
 }
 
+.ContactForm__messageSend {
+    font-family: Abel;
+    color: #D95B43;
+}
+
+.ContactForm__messageSend-success {
+    color: rgb(12, 180, 12);
+}
+
+.ContactForm__messageSend-failed {
+    color: rgb(207, 0, 0);
+}
 
 @media(max-width: 1024px) {
     .ContactForm__input {
