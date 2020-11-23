@@ -34,22 +34,22 @@ function Dashboard() {
                         <h2 className="Dashboard__title">ADMINISTRACIÓN</h2>
                         <div className="Dashboard__cards">
                             <CardButton
-                                backgroundImage="https://pamsoft.es/wp-content/uploads/2016/02/catalogo-online.jpg"
+                                backgroundImage="https://iili.io/FEPGkJ.jpg"
                                 text="PRODUCTOS"
                                 handleClick={() => { history.push(pathNames.products)}}
                             />
                             <CardButton
-                                backgroundImage="https://www.marketingregistrado.com/img/noticias/redes-sociales-google.jpg"
+                                backgroundImage="https://iili.io/FEP1dg.jpg"
                                 text="REDES"
                                 handleClick={() => { history.push(pathNames.networks)}}
                             />
                             <CardButton
-                                backgroundImage="https://fotografias.lasexta.com/clipping/cmsimages02/2019/05/23/7DAFE6C6-6A2B-4C13-BAA0-A99376C5897A/58.jpg"
+                                backgroundImage="https://iili.io/FEPE7a.jpg"
                                 text="NOTICIAS"
                                 handleClick={() => { history.push(pathNames.news)}}
                             />
                             <CardButton
-                                backgroundImage="https://www.idibuild.es/wp-content/uploads/2017/02/seguridad-control-accesos-idibuild2.jpg"
+                                backgroundImage="https://iili.io/FEPMmv.jpg"
                                 text="USUARIOS"
                                 handleClick={() => { history.push(pathNames.user)}}
                             />
