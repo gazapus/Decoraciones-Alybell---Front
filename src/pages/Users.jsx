@@ -6,23 +6,29 @@ import PageTitleBar from '../components/PageTitleBar';
 import { useState, useEffect } from 'react';
 import UserService from "../services/user.service";
 import { useHistory } from 'react-router-dom';
+import useLoggedUser from '../hooks/userLogged';
 import '../styles/Table.css';
 import pathnames from '../utils/pathnames';
 
 function UserPage() {
     const [users, setUsers] = useState([]);
     let history = useHistory();
+    let userLogged = useLoggedUser();
 
     useEffect(() => {
-        UserService.getAll()
-            .then(res => {
-                setUsers(res.data);
-            })
-            .catch(err => {
-                alert(err.response.data.message);
-                if(err.response.status === 403) history.push(pathnames.admin)
-            })
+        if (userLogged) {
+            UserService.getAll()
+                .then(res => {
+                    setUsers(res.data);
+                })
+                .catch(err => {
+                    alert(err.response.data.message);
+                    if (err.response.status === 403) history.push(pathnames.admin)
+                })
+        }
     }, [history])
+
+    if (!userLogged) return <div></div>
 
     return (
         <div className="itemPage">
@@ -65,11 +71,11 @@ function Row({ user }) {
             <td className="Table_td">
                 <button
                     className="Table__button red_background"
-                    onClick={() => { 
+                    onClick={() => {
                         UserService.remove(user.id)
-                            .then(res =>  history.go(0) )
-                            .catch(err => alert("Error, no se puede eliminar este usuario")) 
-                        }}
+                            .then(res => history.go(0))
+                            .catch(err => alert("Error, no se puede eliminar este usuario"))
+                    }}
                 >
                     Eliminar
                 </button>
