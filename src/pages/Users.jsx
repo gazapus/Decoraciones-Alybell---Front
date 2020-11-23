@@ -5,6 +5,7 @@ import LogoutButton from '../components/LogoutButton';
 import PageTitleBar from '../components/PageTitleBar';
 import { useState, useEffect } from 'react';
 import UserService from "../services/user.service";
+import AuthService from "../services/auth.service";
 import { useHistory } from 'react-router-dom';
 import useLoggedUser from '../hooks/userLogged';
 import '../styles/Table.css';
@@ -63,6 +64,17 @@ function UserPage() {
 
 function Row({ user }) {
     let history = useHistory();
+
+    function deleteUser(id) {
+        if (AuthService.getCurrentUser().id !== id) {
+            UserService.remove(user.id)
+                .then(res => history.go(0))
+                .catch(err => alert("Error, no se puede eliminar este usuario"))
+        } else {
+            alert("No te puedes eliminar a ti mismo")
+        }
+    }
+
     return (
         <tr className="Table_tr">
             <td className="Table_td">{user.username}</td>
@@ -71,11 +83,7 @@ function Row({ user }) {
             <td className="Table_td">
                 <button
                     className="Table__button red_background"
-                    onClick={() => {
-                        UserService.remove(user.id)
-                            .then(res => history.go(0))
-                            .catch(err => alert("Error, no se puede eliminar este usuario"))
-                    }}
+                    onClick={() => deleteUser(user.id)}
                 >
                     Eliminar
                 </button>
