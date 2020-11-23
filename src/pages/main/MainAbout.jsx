@@ -33,7 +33,7 @@ function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedCo
         <FullScreenPage
             keyboardOpen={keyboardOpen}
         >
-            <div className="AbotContainer" id="about">
+            <div className="AbotContainer">
                 <div className="About" style={{ backgroundColor: backgroundColor }}>
                     <div className="About__text" style={{ color: textColor }}>
                         <div className="AboutDescription">

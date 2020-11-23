@@ -26,7 +26,7 @@ function UserPage() {
                     if (err.response.status === 403) history.push(pathnames.admin)
                 })
         }
-    }, [history])
+    }, [history, userLogged])
 
     if (!userLogged) return <div></div>
 

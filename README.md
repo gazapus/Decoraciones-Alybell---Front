@@ -1,7 +1,6 @@
 #TAREAS A REALIZAR
 
 [HIGH]
- - Crear administrador real
  - Fix delete user self
 [NORMAL]
  - Cambiar boton nosotros por contacto

@@ -75,9 +75,9 @@ function MainBanner({ keyboardOpen, colors }) {
                     />
                 </ScrollIntoView>
                 <span style={{ marginLeft: 1 + 'vmax' }}></span>
-                <ScrollIntoView selector="#about">
+                <ScrollIntoView selector="#contact">
                     <Button
-                        text="NOSOTROS"
+                        text="CONTACTO"
                         backgroundColor={colors.color4}
                         textColor={colors.light}
                     />

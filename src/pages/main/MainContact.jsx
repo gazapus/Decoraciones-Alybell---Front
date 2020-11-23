@@ -24,7 +24,7 @@ function MainContact({
         <FullScreenPage
             keyboardOpen={keyboardOpen}
         >
-            <div className="ContactScreen">
+            <div className="ContactScreen" id="contact">
                 <div className="ContactScreen__container" style={{ borderColor: borderColor, backgroundColor: backgroundColor }}>
                     <div className="Form">
                         <div className="Form__header">
