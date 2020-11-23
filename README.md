@@ -2,9 +2,9 @@
 
 [HIGH]
  - Fix delete user self
+ - Convertir input a lowecase
 [NORMAL]
  - Definir SEO
- - Agregar salto de linea al modal
  - Efecto de aparacion progresiva
 [LOW]
  - Crear página de Pinterest

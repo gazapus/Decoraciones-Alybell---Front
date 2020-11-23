@@ -45,7 +45,7 @@ function MainBanner({ keyboardOpen, colors }) {
 
     return (
         <FullScreenPage
-            backgroundImageSrc='https://i.ibb.co/28N1qrz/aaaa.jpg'
+            backgroundImageSrc='https://i.ibb.co/GQqBkzY/background.webp'
             keyboardOpen={keyboardOpen}
         >
             <NavBar

@@ -65,8 +65,8 @@ function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedCo
                         <div className="AboutMedia__1image">
                             <div
                                 className="AboutMedia__image"
-                                style={{ backgroundImage: `url(https://media.timeout.com/images/105320237/image.jpg)` }}
-                                onClick={() => openImage('https://media.timeout.com/images/105320237/image.jpg')}
+                                style={{ backgroundImage: `url(https://i.ibb.co/hVqLkX7/D-NQ-NP-621916-MLA40800570687-022020-O-min.jpg)` }}
+                                onClick={() => openImage('https://i.ibb.co/hVqLkX7/D-NQ-NP-621916-MLA40800570687-022020-O-min.jpg')}
                             >
                                 ▶
                         </div>
@@ -74,8 +74,8 @@ function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedCo
                         <div className="AboutMedia__2images">
                             <div
                                 className="AboutMedia__image"
-                                style={{ backgroundImage: `url(https://images-na.ssl-images-amazon.com/images/I/71CvVL2uzmL._AC_SL1500_.jpg)` }}
-                                onClick={() => openImage('https://images-na.ssl-images-amazon.com/images/I/71CvVL2uzmL._AC_SL1500_.jpg')}
+                                style={{ backgroundImage: `url(https://i.ibb.co/2MW6P6R/D-NQ-NP-722308-MLA44096521117-112020-O.png)` }}
+                                onClick={() => openImage('https://i.ibb.co/2MW6P6R/D-NQ-NP-722308-MLA44096521117-112020-O.png')}
                             >
                                 ▶
                         </div>
