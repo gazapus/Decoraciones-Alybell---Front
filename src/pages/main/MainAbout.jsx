@@ -21,8 +21,8 @@ function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedCo
         setModalOpen(true)
     }
 
-    function onLoadImg({target:img}) {
-        if(img.offsetHeight >= img.offsetWidth) {
+    function onLoadImg({ target: img }) {
+        if (img.offsetHeight >= img.offsetWidth) {
             img.style.width = 70 + '%';
         } else {
             img.style.width = 100 + '%';
@@ -38,25 +38,25 @@ function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedCo
                     <div className="About__text" style={{ color: textColor }}>
                         <div className="AboutDescription">
                             <span className="AboutDescription__pre" style={{ color: highlightedColor }}>ACERCA DE NOSOTROS</span>
-                            <h3 className="AboutDescription__title">A RICH FEATURED, EPIC y PREMIUM WORK</h3>
+                            <h3 className="AboutDescription__title">DISEÑOS ORIGINALES EN ILUMINACIÓN</h3>
                             <p className="AboutDescription__text">
-                                Suspendisse facilisis commodo lobortis. Nullam mollis lobortis ex vel faucibus.
-                                Proin nec viverra turpis. Nulla eget justo scelerisque, pretium purus vel, congue
-                                libero. Suspendisse potenti.
+                                Decoraciones Alybell es un emprendimiento ubicado en Villa Crespo, Buenos Aires, especializado en la producción de guirnaldas 
+                                lúminicas de flores. Para hacer nuestras guirnaldas combinamos la tecnología de las luces led con telas 
+                                de calidad selladas manualmente, cuidando cada detalle para entregar productos de calidad.
                         </p>
                         </div>
                         <div className="AboutDetails">
-                            <span className="AboutDetails__title">Web Design y Development</span>
+                            <span className="AboutDetails__title">NUESTROS PRODUCTOS</span>
                             <div className="AboutDetails__listContainer">
                                 <ul className="AboutDetails__list">
-                                    <li className="AboutDetails__item">web content</li>
-                                    <li className="AboutDetails__item">web content2</li>
-                                    <li className="AboutDetails__item">web content2</li>
+                                    <li className="AboutDetails__item">Guirnaldas de flores</li>
+                                    <li className="AboutDetails__item">Pantallas de lámpara</li>
+                                    <li className="AboutDetails__item">Luces LED</li>
                                 </ul>
                                 <ul className="AboutDetails__list">
-                                    <li className="AboutDetails__item">web content3</li>
-                                    <li className="AboutDetails__item">web content2</li>
-                                    <li className="AboutDetails__item">web content4</li>
+                                    <li className="AboutDetails__item">Flores de tela</li>
+                                    <li className="AboutDetails__item">Lámparas LED</li>
+                                    <li className="AboutDetails__item">Productos personalizados</li>
                                 </ul>
                             </div>
                         </div>

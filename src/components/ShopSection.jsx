@@ -32,8 +32,8 @@ function ShopSection({
         <div className="ShopSection">
             <div className="Shop" style={{backgroundColor: backgroundColor}}>
                 <div className="Shop__text" style={{color: textColor}}>
-                    <h3 className="Shop__title">FOR BUILDING THE MODERN WEBSITE</h3>
-                    <p className="Shop__description">Packed with all the goodies you can get, Kallyas is our flagship premium template.</p>
+                    <h3 className="Shop__title">CONSIGUE NUESTROS PRODUCTOS ONLINE</h3>
+                    <p className="Shop__description"> Visita nuestro catalogo completo en mercadolibre y encontrá aquello que estabas buscando </p>
                 </div>
                 <div className="Shop__buttonContainer">
                     <Button

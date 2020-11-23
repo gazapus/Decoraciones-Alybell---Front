@@ -61,7 +61,7 @@ function MainBanner({ keyboardOpen, colors }) {
                 backgroundColor={colors.color1}
             />
             <BannerText
-                mainText="LUCES Y DECORACIONES PARA TU HOGAR Y EVENTO"
+                mainText="GUIRNALDAS, LUCES Y DECORACIONES PARA TU HOGAR O EVENTO"
                 subText={news}
                 mainTextColor={colors.color2}
                 secondaryTextColor={colors.color3}

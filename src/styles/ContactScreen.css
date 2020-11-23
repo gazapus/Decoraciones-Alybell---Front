@@ -70,14 +70,10 @@
     box-sizing: border-box;
 }
 
-.Form__networks a {
+.Form__networks span {
     font-family: Abel;
     text-decoration: none;
     font-size: 1.2em;
-}
-
-.Form__networks a:hover {
-    text-decoration: underline;
 }
 
 .Map {

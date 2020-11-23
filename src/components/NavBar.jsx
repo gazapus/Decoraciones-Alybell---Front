@@ -7,7 +7,7 @@ import '../styles/NavBar.css';
  * @prop {Array} rightItems - Array of items in the right's bar
  * @prop {string} backgroundColor - background color in hex format
  */
-function NavBar({ leftItems, rightItems, backgroundColor="#000" }) {
+function NavBar({ leftItems, rightItems, backgroundColor="#000000" }) {
     return (
         <div className="NavBar" style={{backgroundColor: backgroundColor + 'CA'}}>
             <div className="NavBar__leftItems">

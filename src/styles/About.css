@@ -198,8 +198,15 @@
         height: 100%;
         flex-direction: row;
     }
+    .About__text {
+        width: 55%;
+    }
+    .About__media {
+        width: 25%;
+        height: 60%;
+        display: flex;
+    }
 }
-
 
 /* IPAD */
 

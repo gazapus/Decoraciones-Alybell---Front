@@ -14,8 +14,8 @@ import { useEffect, useState } from 'react';
 function BannerText({ 
     mainText, 
     subText = [], 
-    mainTextColor = "#000",
-    secondaryTextColor = "#000",
+    mainTextColor = "#000000",
+    secondaryTextColor = "#000000",
     secondaryTextBGColor = "#AEAEAE",
     children,
 }) {

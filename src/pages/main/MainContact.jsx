@@ -30,7 +30,7 @@ function MainContact({
                         <div className="Form__header">
                             <h3 className="Form__title">CONTACTANOS</h3>
                             <hr className="Form__line" />
-                            <p className="Form__subtitle">Dejanos un mensaje y te responderemos a la brevedad</p>
+                            <p className="Form__subtitle">Dejanos tu consulta y te responderemos a la brevedad</p>
                         </div>
                         <div className="Form__inputs">
                             <ContactForm
@@ -41,11 +41,9 @@ function MainContact({
                             />
                         </div>
                         <div className="Form__networks" style={{ backgroundColor: footerColor }}>
-                            <a href="mailto:elcorreoquequieres@correo.com?Subject=Contacto%20Decoraciones%20Alybell"
-                                style={{color: footerText}}
-                            >
-                                o escribenos un mail aquí
-                            </a>
+                            <span style={{color: footerText}}>
+                                o escribenos por nuestras redes <strong>⬇</strong>
+                            </span>
                         </div>
                     </div>
                     <div className="Map" style={{ borderColor: borderColor }}>
