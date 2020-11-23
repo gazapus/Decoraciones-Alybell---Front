@@ -190,6 +190,16 @@
     }
 }
 
+@media (max-width: 1250px) {
+
+    .About__text {
+        width: 55%;
+    }
+    .About__media {
+        width: 40%;
+    }
+}
+
 /* LANDSCAPE MOBIL */
 
 @media(max-width: 1024px) and (orientation: landscape) and (min-height: 330px) {
@@ -199,10 +209,11 @@
         flex-direction: row;
     }
     .About__text {
-        width: 55%;
+        width: 60%;
     }
     .About__media {
-        width: 25%;
+        width: 30%;
+        margin-left: 2vw;
         height: 60%;
         display: flex;
     }

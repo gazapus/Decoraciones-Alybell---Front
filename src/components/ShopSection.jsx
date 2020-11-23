@@ -33,7 +33,10 @@ function ShopSection({
             <div className="Shop" style={{backgroundColor: backgroundColor}}>
                 <div className="Shop__text" style={{color: textColor}}>
                     <h3 className="Shop__title">CONSIGUE NUESTROS PRODUCTOS ONLINE</h3>
-                    <p className="Shop__description"> Visita nuestro catalogo completo en mercadolibre y encontrá aquello que estabas buscando </p>
+                    <p className="Shop__description"> 
+                        Visita nuestro catalogo completo en mercadolibre, encontrá aquello que estabas buscando y te lo enviamos a
+                        domicilio o retiras por nuestro punto de entrega en Villa Crespo
+                    </p>
                 </div>
                 <div className="Shop__buttonContainer">
                     <Button
