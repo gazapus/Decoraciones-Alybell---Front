@@ -29,7 +29,7 @@ function NetworkForm({ backgroundColor = "#000", textColor = "#fff", handleSubmi
     function handleSubmitForm(e) {
         e.preventDefault();
         if(isValidForm()) {
-            handleSubmit(username, email, password, isAdmin);
+            handleSubmit(username.toLocaleLowerCase(), email.toLocaleLowerCase(), password, isAdmin);
         } else {
             setErrorMessage("Uno de los datos ingresados no es correcto")
         }

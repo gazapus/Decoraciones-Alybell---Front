@@ -29,7 +29,7 @@ function LoginForm({ backgroundColor = "#000", textColor = "#fff", handleLogin, 
         e.preventDefault();
         if(validInputs){
             setErrorMessage("")
-            handleLogin(username, password);
+            handleLogin(username.toLocaleLowerCase(), password);
         } else {
             setErrorMessage("Debe ingresar un usuario y contraseña")
         }
