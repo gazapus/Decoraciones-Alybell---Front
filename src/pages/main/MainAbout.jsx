@@ -65,8 +65,8 @@ function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedCo
                         <div className="AboutMedia__1image">
                             <div
                                 className="AboutMedia__image"
-                                style={{ backgroundImage: `url(https://i.ibb.co/hVqLkX7/D-NQ-NP-621916-MLA40800570687-022020-O-min.jpg)` }}
-                                onClick={() => openImage('https://i.ibb.co/hVqLkX7/D-NQ-NP-621916-MLA40800570687-022020-O-min.jpg')}
+                                style={{ backgroundImage: `url(https://i.ibb.co/NLLBhDx/D-NQ-NP-621916-MLA40800570687-022020-O-min.webp)` }}
+                                onClick={() => openImage('https://i.ibb.co/NLLBhDx/D-NQ-NP-621916-MLA40800570687-022020-O-min.webp')}
                             >
                                 ▶
                         </div>
@@ -74,8 +74,8 @@ function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedCo
                         <div className="AboutMedia__2images">
                             <div
                                 className="AboutMedia__image"
-                                style={{ backgroundImage: `url(https://i.ibb.co/2MW6P6R/D-NQ-NP-722308-MLA44096521117-112020-O.png)` }}
-                                onClick={() => openImage('https://i.ibb.co/2MW6P6R/D-NQ-NP-722308-MLA44096521117-112020-O.png')}
+                                style={{ backgroundImage: `url(https://i.ibb.co/dfTxCGZ/D-NQ-NP-722308-MLA44096521117-112020-O.webp)` }}
+                                onClick={() => openImage('https://i.ibb.co/dfTxCGZ/D-NQ-NP-722308-MLA44096521117-112020-O.webp')}
                             >
                                 ▶
                         </div>
