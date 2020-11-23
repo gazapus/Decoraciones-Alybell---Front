@@ -190,7 +190,7 @@
     }
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 1250px) and (orientation: landscape){
 
     .About__text {
         width: 55%;
