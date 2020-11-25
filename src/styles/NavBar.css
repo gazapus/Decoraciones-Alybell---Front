@@ -5,7 +5,7 @@
     align-items: center;
     color: wheat;
     box-sizing: border-box;
-    height: 10%;
+    height: 12vh;
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -40,11 +40,15 @@
     .NavBar {
         padding-left: 1%;
         padding-right: 1%;
-        height: 12%;
     }
-
     .NavBar__rightItems {
         flex-wrap: nowrap;
         align-items: center;
+    }
+}
+
+@media (max-width: 800px) and (orientation: landscape) {
+    .NavBar {
+        height: 15vh;
     }
 }

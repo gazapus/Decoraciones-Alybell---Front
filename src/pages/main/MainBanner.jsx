@@ -10,7 +10,7 @@ import NetworkService from '../../services/network.service';
 import NewsService from '../../services/news.service';
 import ScrollIntoView from 'react-scroll-into-view';
 
-function MainBanner({ keyboardOpen, colors }) {
+function MainBanner({ colors }) {
     const [imageSize, setImageSize] = useState("M");
     const [width] = useWindowSize();
     const [networks, setNetworksIcons] = useState([]);
@@ -46,7 +46,6 @@ function MainBanner({ keyboardOpen, colors }) {
     return (
         <FullScreenPage
             backgroundImageSrc='https://i.ibb.co/GQqBkzY/background.webp'
-            keyboardOpen={keyboardOpen}
         >
             <NavBar
                 leftItems={<Logo />}

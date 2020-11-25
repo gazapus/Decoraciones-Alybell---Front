@@ -1,5 +1,4 @@
 #TAREAS A REALIZAR
- 
+ - Cambiar imagenes del dashbard
  - Crear página de Pinterest
- - Cambiar Readme.md
  - Editar descripción github

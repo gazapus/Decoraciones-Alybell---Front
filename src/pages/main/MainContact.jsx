@@ -6,15 +6,11 @@ import { useEffect, useState } from 'react';
 /** 
  * Represents contact form component
  * @constructor
- * @prop {function} onOpenKeyboard - function to run when focus an input
- * @prop {function} onCloseKeyoboard - function to run when blur an input
  * @prop {string} backgroundColor - Form background color
  * @prop {string} borderColor - Form border color
  * @prop {string} footerColor - Form footer background color
  */
 function MainContact({
-    keyboardOpen,
-    setKeyboardOpen,
     borderColor = "#000",
     backgroundColor = "#00000021",
     footerColor = "#000000A8",
@@ -43,9 +39,7 @@ function MainContact({
 
 
     return (
-        <FullScreenPage
-            keyboardOpen={keyboardOpen}
-        >
+        <FullScreenPage>
             <div className="ContactScreen" id="contact">
                 <div className="ContactScreen__container" style={{ borderColor: borderColor, backgroundColor: backgroundColor }}>
                     <div className="Form">
@@ -56,8 +50,6 @@ function MainContact({
                         </div>
                         <div className="Form__inputs">
                             <ContactForm
-                                onOpenKeyboard={() => setKeyboardOpen(true)}
-                                onCloseKeyoboard={() => setKeyboardOpen(false)}
                                 buttonBgColor = {buttonColor}
                                 buttonTextColor = {buttonText}
                             />

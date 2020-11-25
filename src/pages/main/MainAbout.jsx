@@ -11,7 +11,7 @@ import { useState } from 'react';
  * @prop {string} highlightedColor - highlighted text color
  * 
  */
-function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedColor = "#FF0000", keyboardOpen }) {
+function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedColor = "#FF0000" }) {
 
     const [modalOpen, setModalOpen] = useState(false);
     const [modalImage, setModalImage] = useState('');
@@ -30,9 +30,7 @@ function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedCo
     }
 
     return (
-        <FullScreenPage
-            keyboardOpen={keyboardOpen}
-        >
+        <FullScreenPage>
             <div className="AbotContainer">
                 <div className="About" style={{ backgroundColor: backgroundColor }}>
                     <div className="About__text" style={{ color: textColor }}>

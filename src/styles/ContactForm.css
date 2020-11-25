@@ -26,7 +26,7 @@
 
 .ContactForm__message {
     width: 75%;
-    min-height: 3em;
+    min-height: 8em;
     margin: 1em 0 1em 0;
     border-color: rgb(41, 41, 41);
     border-width: 2px;
@@ -86,12 +86,13 @@
     }
     .ContactForm__message {
         width: 90%;
-        min-height: 3em;
+        min-height: 8em;
         margin: 0.3em;
     }
     .ContactForm__buttonContainer {
         width: 90%;
         justify-content: center;
+        padding-top: 3vmax
     }
 }
 @media (orientation: portrait) and (min-width: 700px) and (min-height: 1023px) {

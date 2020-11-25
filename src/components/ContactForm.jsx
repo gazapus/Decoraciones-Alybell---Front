@@ -7,12 +7,10 @@ import MailService from '../services/mail.service';
 /** 
  * Represents contact form component
  * @constructor
- * @prop {function} onOpenKeyboard - function to run when focus an input
- * @prop {function} onCloseKeyoboard - function to run when blur an input
  * @prop {string} buttonBgColor - background color button
  * @prop {string} buttonTextColor - text color button
  */
-function ContactForm({ onOpenKeyboard, onCloseKeyoboard, buttonBgColor = "#000", buttonTextColor = "#fff" }) {
+function ContactForm({ buttonBgColor = "#000", buttonTextColor = "#fff" }) {
     const [sendingForm, setSendingForm] = useState(false);
     const [formMessage, setFormMessage] = useState("");
 
@@ -82,8 +80,6 @@ function ContactForm({ onOpenKeyboard, onCloseKeyoboard, buttonBgColor = "#000",
                 placeholder="nombre"
                 name="name"
                 className="ContactForm__input"
-                onFocus={onOpenKeyboard}
-                onBlur={onCloseKeyoboard}
                 maxLength={50}
                 minLength={1}
                 onChange={() => nameInput.current.classList.remove('ContactForm__input-wrong')}
@@ -93,8 +89,6 @@ function ContactForm({ onOpenKeyboard, onCloseKeyoboard, buttonBgColor = "#000",
                 ref={emailInput}
                 placeholder="email"
                 className="ContactForm__input"
-                onFocus={onOpenKeyboard}
-                onBlur={onCloseKeyoboard}
                 maxLength={50}
                 minLength={1}
                 onChange={() => emailInput.current.classList.remove('ContactForm__input-wrong')}
@@ -103,8 +97,6 @@ function ContactForm({ onOpenKeyboard, onCloseKeyoboard, buttonBgColor = "#000",
                 placeholder="mensaje"
                 ref={messageInput}
                 className="ContactForm__message"
-                onFocus={onOpenKeyboard}
-                onBlur={onCloseKeyoboard}
                 maxLength={500}
                 minLength={1}
                 onChange={() => messageInput.current.classList.remove('ContactForm__input-wrong')}

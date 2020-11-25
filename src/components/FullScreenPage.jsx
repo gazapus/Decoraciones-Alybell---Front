@@ -7,10 +7,8 @@ import { useEffect, useState } from "react";
  * @constructor
  * @prop {string} backgroundImageSrc - Optional: The url of the background image
  * @prop {string} backgroundColor - Color in Hexadecimal of the background. Default: #000
- * @prop {boolean} keyboardOpen - Define if the mobile keyboard is open. Default = false
  */
 function FullScreenPage({
-    keyboardOpen = false,
     backgroundImageSrc,
     backgroundColor = "#00000000",
     children
@@ -18,8 +16,7 @@ function FullScreenPage({
     // eslint-disable-next-line no-unused-vars
     const [width, height] = useWindowSize();
     const [style, setStyle] = useState({});
-    const [originalHeight, setOriginalHeight] = useState(0);
-    const [inputsFocus, setInputsFocus] = useState(0);
+    const [firstRender, setFirstRender] = useState(true);
 
     useEffect(() => {
         let newStyle = {};
@@ -28,27 +25,15 @@ function FullScreenPage({
         } else {
             newStyle = { backgroundColor: backgroundColor };
         }
-        if (keyboardOpen) {
-            newStyle.height = originalHeight + 'px';
-            setInputsFocus(inputsFocus + 1);
-        } else {
-            if(inputsFocus === 0) {
-                newStyle.height = height + 'px';
-                setOriginalHeight(height);
-            }
-            if(inputsFocus === 1) {
-                newStyle.height = height + 'px';
-                setOriginalHeight(height);
-                setInputsFocus(inputsFocus - 1);
-            }
-            if(inputsFocus > 1) {
-                setInputsFocus(inputsFocus - 1);
-            }
-            
+        if (height !== 0) {
+            setFirstRender(false)
         }
-        setStyle(newStyle);
+        if (firstRender) {
+            newStyle.minHeight = height + 'px';
+            setStyle(newStyle);
+        }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [keyboardOpen, height])
+    }, [height])
 
     return (
         <div className="FullScreenPage" style={style}>
