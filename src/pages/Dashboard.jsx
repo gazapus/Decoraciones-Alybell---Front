@@ -34,22 +34,22 @@ function Dashboard() {
                         <h2 className="Dashboard__title">ADMINISTRACIÓN</h2>
                         <div className="Dashboard__cards">
                             <CardButton
-                                backgroundImage="https://iili.io/FEPGkJ.jpg"
+                                backgroundImage="https://i.ibb.co/hB27kQB/tqt96-vf0f9.webp"
                                 text="PRODUCTOS"
                                 handleClick={() => { history.push(pathNames.products)}}
                             />
                             <CardButton
-                                backgroundImage="https://iili.io/FEP1dg.jpg"
+                                backgroundImage="https://i.ibb.co/9pJ1Lf9/t0ty8-78kzf.webp"
                                 text="REDES"
                                 handleClick={() => { history.push(pathNames.networks)}}
                             />
                             <CardButton
-                                backgroundImage="https://iili.io/FEPE7a.jpg"
+                                backgroundImage="https://i.ibb.co/k39GyFW/tdtf5-dw08f.webp"
                                 text="NOTICIAS"
                                 handleClick={() => { history.push(pathNames.news)}}
                             />
                             <CardButton
-                                backgroundImage="https://iili.io/FEPMmv.jpg"
+                                backgroundImage="https://i.ibb.co/YLhwqTn/t20az-gc4ww.webp"
                                 text="USUARIOS"
                                 handleClick={() => { history.push(pathNames.user)}}
                             />
