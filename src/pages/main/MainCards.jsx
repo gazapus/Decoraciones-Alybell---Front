@@ -28,7 +28,7 @@ function CardsPage({colors}) {
             setCardsQuantity(Math.max(2, cardRows) * columns);
         }
 
-        if (width >= height) {
+        if (width >= height && height >350) {
             adjustCards(4);
         } else {
             adjustCards(2);
