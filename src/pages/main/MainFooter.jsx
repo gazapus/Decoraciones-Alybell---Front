@@ -3,6 +3,12 @@ import Icon from '../../components/Icon';
 import { useEffect, useState } from 'react';
 import NetworkService from '../../services/network.service';
 
+
+/** 
+ * FooterContainer of the main page
+ * @constructor
+ * @prop {object} colors
+ */
 function MainFooter({colors}) {
     const [networks, setNetworks] = useState([]);
 

@@ -10,6 +10,12 @@ import NetworkService from '../../services/network.service';
 import NewsService from '../../services/news.service';
 import ScrollIntoView from 'react-scroll-into-view';
 
+/** 
+ * Represents the banner page section
+ * @constructor
+ * @prop {object} colors
+ * 
+ */
 function MainBanner({ colors }) {
     const [imageSize, setImageSize] = useState("M");
     const [width] = useWindowSize();

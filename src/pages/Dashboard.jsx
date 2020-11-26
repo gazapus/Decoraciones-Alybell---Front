@@ -8,6 +8,9 @@ import { useHistory } from "react-router-dom";
 import pathNames from '../utils/pathnames';
 import CardButton from '../components/CardButton';
 
+/** 
+ * Dashboard Page
+ */
 function Dashboard() {
     const [userAuthorizedLoaded, setUserAuthorizedLoaded] = useState(false);
     let history = useHistory();

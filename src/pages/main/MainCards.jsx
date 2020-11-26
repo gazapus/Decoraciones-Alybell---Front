@@ -9,6 +9,8 @@ import ProductService from '../../services/product.service';
 /** 
  * Represents the card container
  ** This adjust the large and distribution of the cards on the parent element
+ * @constructor
+ * @prop {object} colors
  */
 function CardsPage({colors}) {
     const [width, height] = useWindowSize();

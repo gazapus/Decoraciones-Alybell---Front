@@ -9,14 +9,17 @@ import { useEffect, useState } from 'react';
  * @prop {string} backgroundColor - Form background color
  * @prop {string} borderColor - Form border color
  * @prop {string} footerColor - Form footer background color
+ * @prop {string} buttonColor - background button color
+ * @prop {string} buttonText - text button color
+ * @prop {string} footerText - background footer color
  */
 function MainContact({
-    borderColor = "#000",
+    borderColor = "#000000",
     backgroundColor = "#00000021",
     footerColor = "#000000A8",
-    buttonColor = "#000",
-    buttonText = "#fff",
-    footerText = "#fff"
+    buttonColor = "#000000",
+    buttonText = "#ffffff",
+    footerText = "#ffffff"
 }) {
     const [map, setMap] = useState(<p>Cargando mapa</p>)
 
