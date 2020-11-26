@@ -9,7 +9,7 @@
 }
 
 .BannerText {
-    height: 88vh;
+    min-height: 88vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -31,15 +31,15 @@
 }
 
 .SubText {
-    height: 18%;
     box-sizing: border-box;
-    padding: 0.5% 4% 1% 1%;
+    padding: 2em 1.5em 2em 1em;
     overflow: hidden;
     border-radius: 0 100px 0 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2% 0 2% 0;
+    min-height: 6em;
 }
 
 .SubText__text {
@@ -47,7 +47,7 @@
     font-family: Rajdhani-r;
     font-size: 1.5em;
     overflow: hidden;
-    text-overflow: ellipsis; 
+    text-overflow: ellipsis;
     margin: 0;
     text-align: center;
 }
@@ -72,41 +72,52 @@
 }
 
 @media (max-width: 1200px) {
-    .BannerText  {
+    .BannerText {
         padding-left: 15%;
         padding-right: 15%;
     }
-
     .BannerText__main {
         font-size: 3.4em;
     }
 }
 
 @media (max-width: 1000px) {
-    .BannerText  {
+    .BannerText {
         padding-left: 8%;
         padding-right: 8%;
     }
 }
 
 @media (max-width: 800px) {
-    .BannerText  {
+    .BannerText {
         padding-left: 2%;
         padding-right: 2%;
     }
-
     .BannerText__main {
-        font-size: 2.4em;
+        font-size: 2.2em;
         text-align: center;
         max-height: 45%;
     }
     .SubText__text {
-        font-size: 1em; 
+        font-size: 1em;
         padding: 3% 9% 3% 5%;
     }
-
+    .SubText {
+        margin: 2% 1% 2% 2%;
+        min-height: 5em;
+        padding: 0.8em 1em 0.8em 0.5em;
+    }
     .BannerText__children {
         justify-content: center;
         max-height: 35%;
+    }
+}
+
+
+/* PORTRAIT con teclado abierto*/
+
+@media(max-width: 1024px) and (orientation: landscape) and (max-height: 350px) {
+    .BannerText {
+        min-height: 125vh;
     }
 }
