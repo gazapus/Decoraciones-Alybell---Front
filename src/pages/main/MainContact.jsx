@@ -18,7 +18,7 @@ function MainContact({
     buttonText = "#fff",
     footerText = "#fff"
 }) {
-    const [map, setMap] = useState(<p>Cargando</p>)
+    const [map, setMap] = useState(<p>Cargando mapa</p>)
 
     useEffect(() => {
         window.addEventListener('load', () => {

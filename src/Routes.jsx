@@ -12,6 +12,7 @@ import News from './pages/NewsPage';
 import EditNews from './pages/EditNews';
 import User from './pages/Users';
 import EditUser from './pages/EditUser';
+import NotFound from './pages/NotFound';
 
 function Routes() {
     return (
@@ -27,6 +28,7 @@ function Routes() {
             <Route exact path={pathNames.news_edit} component={EditNews} />
             <Route exact path={pathNames.user} component={User} />
             <Route exact path={pathNames.user_edit} component={EditUser} />
+            <Route component={NotFound} />
         </Switch>
     );
 }
