@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import AuthService from "../services/auth.service";
-import FullScreenPage from '../components/FullScreenPage';
 import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
 import Logo from '../components/Logo';
@@ -41,7 +40,6 @@ function Login() {
 
     return (
         <div className="Login">
-            <FullScreenPage>
                 <NavBar
                     leftItems={<Logo />}
                 />
@@ -51,7 +49,6 @@ function Login() {
                         errorLogin={errorLogin}
                     />
                 </div>
-            </FullScreenPage>
             <Footer />
         </div>
     )
