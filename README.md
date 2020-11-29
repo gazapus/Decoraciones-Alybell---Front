@@ -1,4 +1,4 @@
-# Decoraciones Alybell
+#  SPA Decoraciones Aly
 
 SPA de un emprendimiento de elaboración de guirnaldas artesanales y otros objetos de decoración. Incluye el panel de administración para que el propio dueño del mismo pueda editar los productos, enlaces y textos visibles. 
 
