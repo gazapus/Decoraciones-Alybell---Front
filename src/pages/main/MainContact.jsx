@@ -58,6 +58,14 @@ function MainContact({
                             />
                         </div>
                         <div className="Form__networks" style={{ backgroundColor: footerColor }}>
+                            <span style={{color: footerText }}>
+                                Contactanos por Whatsapp al {'\u0020'} 
+                                <strong>
+                                    <a href="https://api.whatsapp.com/send?phone=+5491163378597&text=Hola! Me contacto por Decoraciones Alybell" target="nblanck" style={{color: footerText}}> 
+                                        1163378597
+                                    </a>
+                                </strong>
+                            </span>
                             <span style={{color: footerText}}>
                                 o escribenos por nuestras redes <strong>⬇</strong>
                             </span>

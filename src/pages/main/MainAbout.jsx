@@ -48,12 +48,12 @@ function MainAbout({ backgroundColor = "#000", textColor = "#fff", highlightedCo
                             <div className="AboutDetails__listContainer">
                                 <ul className="AboutDetails__list">
                                     <li className="AboutDetails__item">Guirnaldas de flores</li>
-                                    <li className="AboutDetails__item">Pantallas de lámpara</li>
-                                    <li className="AboutDetails__item">Luces LED</li>
+                                    <li className="AboutDetails__item">Lámparas LED</li>
+                                    <li className="AboutDetails__item">Cortinas de luces</li>
                                 </ul>
                                 <ul className="AboutDetails__list">
-                                    <li className="AboutDetails__item">Flores de tela</li>
-                                    <li className="AboutDetails__item">Lámparas LED</li>
+                                    <li className="AboutDetails__item">Blanquería</li>
+                                    <li className="AboutDetails__item">Acolchados y sábanas</li>
                                     <li className="AboutDetails__item">Productos personalizados</li>
                                 </ul>
                             </div>
